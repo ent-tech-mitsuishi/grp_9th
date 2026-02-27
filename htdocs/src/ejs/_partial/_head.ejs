@@ -1,0 +1,49 @@
+<%
+ // ページのmeta情報
+ var myMeta = meta[lang][pageID];
+ // 共通のmeta情報
+ var commonMeta = meta[lang].common;
+
+ // タイトルの設定
+ var title;
+ if (pageID == "top") {
+  title = commonMeta.title;
+ } else {
+  title = myMeta.title + " | " + commonMeta.title;
+ }
+ %>
+<head>
+  <meta charset="utf-8">
+  <!-- title -->
+  <title><%= title %></title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="<%- commonMeta.description %>">
+  <meta name="keywords" content="<%- commonMeta.keywords %>">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%= title %>">
+  <meta name="twitter:description" content="<%- commonMeta.description %>">
+  <meta name="twitter:url" content="<%= commonMeta.og_url %>">
+  <meta name="twitter:image" content="<%= commonMeta.og_img %>">
+  <meta name="twitter:site" content="<%= commonMeta.twitter_id %>">
+  <meta property="og:site_name" content="<%= title %>">
+  <meta property="og:title" content="<%= title %>">
+  <meta property="og:description" content="<%- commonMeta.description %>">
+  <meta property="og:url" content="<%= commonMeta.og_url %>">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="<%= commonMeta.og_img %>">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  >
+  <!-- favicon -->
+  <link rel="shortcut icon" href="<%= relative_path %>assets/img/favicon.ico">
+  <link
+    rel="apple-touch-icon"
+    href="<%= commonMeta.url %>assets/img/webclip.png"
+  >
+  <!-- css -->
+  <link rel="stylesheet" href="<%= relative_path %>assets/css/share.css">
+</head>

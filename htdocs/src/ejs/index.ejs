@@ -1,0 +1,42 @@
+<%
+// ページのIDを記述
+var pageID = "top";
+// 言語設定
+var lang = "ja";
+// ファイルの相対パス
+var relative_path = "./";
+// このページのmeta情報
+var myMeta = meta[lang][pageID];
+%>
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+  <%-include(`${relative_path}_partial/_head`,{lang:lang,pageID:pageID,relative_path:relative_path})%>
+  <body>
+    <%-include(`${relative_path}_partial/_body-after`,{lang:lang,pageID:pageID,relative_path:relative_path})%>
+    <%# ここから下にhtml書いてね このコメントは反映されません%>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="test">pppp</div>
+        </div>
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+    <%# ここから上にhtml書いてね このコメントは反映されません%>
+    <%- include( `${relative_path}_partial/_foot`,{lang:lang,pageID:pageID,relative_path:relative_path}) %>
+  </body>
+</html>

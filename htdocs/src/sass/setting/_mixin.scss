@@ -1,0 +1,68 @@
+@charset "utf-8";
+@use 'setting/setting' as *;
+
+@function get_vw($size, $viewport: $vp-sp) {
+  @return calc($size / $viewport) * 100vw;
+}
+
+@function get_min($size, $viewport: $vp-pc) {
+  @return min(#{get_vw($size, $viewport), $size * 1px});
+}
+
+@function get_max($size, $viewport: $vp-pc) {
+  @return max(#{get_vw($size, $viewport), $size * 1px});
+}
+
+@function get_vh($size, $viewport: $vp-sp) {
+  @return calc($size / $viewport) * 100vh;
+}
+
+// flexのcenter
+@mixin center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// after
+@mixin after() {
+  &:after {
+    display: block;
+    content: '';
+    @content;
+  }
+}
+
+// before
+@mixin before() {
+  &:before {
+    display: block;
+    content: '';
+    @content;
+  }
+}
+
+// スクロールバー削除
+@mixin scrollbar_none {
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// max widthのメディアクエリ
+@mixin max-screen($max: $bp_sp) {
+  @media only screen and (max-width: $max) {
+    @content;
+  }
+}
+
+// min widthのメディアクエリ
+@mixin min-screen($min: $bp_sp) {
+  @media only screen and (min-width: $min) {
+    @content;
+  }
+}

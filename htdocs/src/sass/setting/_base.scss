@@ -1,0 +1,90 @@
+@use './setting' as var;
+@use './mixin' as *;
+// リセットcss
+@use './destyle';
+// swiper css
+@use '../../node_modules/swiper/swiper.scss';
+
+/*========================================
+*	common
+========================================*/
+// セレクション
+::selection {
+  color: var.$selection_color;
+  background: var.$selection_bg;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  color: var.$common_font;
+  background-color: var.$common_bg;
+  font-family: var.$font-base;
+}
+
+body {
+  width: 100%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+tr,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+}
+
+img,
+picture {
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  pointer-events: none;
+  vertical-align: bottom;
+}
+
+// pc非表示
+.pc-none {
+  display: none;
+
+  @include max-screen(var.$bp_sp) {
+    display: block;
+  }
+}
+
+// sp非表示
+.sp-none {
+  @include min-screen() {
+    display: none;
+  }
+
+  @include max-screen(var.$bp_sp) {
+    display: none;
+  }
+}

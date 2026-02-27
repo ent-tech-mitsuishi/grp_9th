@@ -1,0 +1,13 @@
+services:
+  php-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php-server
+    ports:
+      - "8081:80"
+    volumes:
+      - ./php:/var/www/html/php
+      - ./release:/var/www/html/release
+      - ./develop:/var/www/html/develop
+    restart: unless-stopped
