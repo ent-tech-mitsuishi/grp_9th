@@ -1,0 +1,12 @@
+@use './setting/setting' as *;
+@use './setting/mixin' as *;
+
+.top {
+  &__player {
+    margin-top: get_vw(30);
+
+    @include min-screen() {
+      margin-top: get_px(30);
+    }
+  }
+}

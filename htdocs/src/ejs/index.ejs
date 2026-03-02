@@ -14,28 +14,30 @@ var myMeta = meta[lang][pageID];
   <body>
     <%-include(`${relative_path}_partial/_body-after`,{lang:lang,pageID:pageID,relative_path:relative_path})%>
     <%# ここから下にhtml書いてね このコメントは反映されません%>
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <div class="test">pppp</div>
+    <main class="common__main">
+      <div class="common__bg sp-none"></div>
+      <article class="common__article">
+        <div class="common__label">
+          <p class="common__label-name">NEWSLETTER</p>
+          <p class="common__label-date">2026.3.16</p>
         </div>
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-      </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
-    </div>
+        <h1 class="common__h1">
+          <img
+            src="<%= relative_path %>assets/img/common/img_mv.png"
+            alt="9周年 PROJECT LIVEHOUSE CIRCLE 社内報 NEWSLETTER"
+          >
+        </h1>
+        <section class="top__player">
+          <h2 class="top__player-ttl">
+            <img
+              src="<%= relative_path %>assets/img/ttl_history.png"
+              alt="これまでの活動履歴をお届け！"
+            >
+          </h2>
+          <div class="top__player-pass"></div>
+        </section>
+      </article>
+    </main>
     <%# ここから上にhtml書いてね このコメントは反映されません%>
     <%- include( `${relative_path}_partial/_foot`,{lang:lang,pageID:pageID,relative_path:relative_path}) %>
   </body>

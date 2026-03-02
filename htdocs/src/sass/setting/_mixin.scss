@@ -17,6 +17,10 @@
   @return calc($size / $viewport) * 100vh;
 }
 
+@function get_px($size, $viewport: $vp-sp) {
+  @return calc($size / $viewport) * 450px;
+}
+
 // flexのcenter
 @mixin center() {
   display: flex;
@@ -61,7 +65,7 @@
 }
 
 // min widthのメディアクエリ
-@mixin min-screen($min: $bp_sp) {
+@mixin min-screen($min: $bp_sp + 1px) {
   @media only screen and (min-width: $min) {
     @content;
   }
