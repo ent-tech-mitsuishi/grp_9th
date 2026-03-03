@@ -161,6 +161,10 @@ $user = $d['0'] ?? [];
   </style>
 </head>
 <body>
+  <script>
+    window.garupa9thData = <?php echo json_encode($parsedData, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
+    console.log('garupa9thData:', JSON.stringify(window.garupa9thData, null, 2));
+  </script>
   <h1>ガルパ 9周年 振り返り</h1>
 
   <div class="user-name"><?php echo htmlspecialchars($user['2'] ?? '---', ENT_QUOTES, 'UTF-8'); ?></div>
