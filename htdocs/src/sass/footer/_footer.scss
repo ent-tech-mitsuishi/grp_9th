@@ -2,4 +2,221 @@
 @use './setting/mixin' as *;
 
 .footer {
+  margin-top: get_vw(80);
+
+  @include min-screen() {
+    margin-top: get_px(80);
+  }
+
+  &__app {
+    margin-top: get_vw(65);
+
+    @include min-screen() {
+      margin-top: get_px(65);
+    }
+  }
+
+  &__app-wrap {
+    @include center;
+    gap: get_vw(30);
+
+    @include min-screen() {
+      gap: get_px(30);
+    }
+  }
+
+  &__app-icon {
+    width: get_vw(220);
+
+    @include min-screen() {
+      width: get_px(220);
+    }
+  }
+
+  &__app-download {
+    width: get_vw(309);
+
+    @include min-screen() {
+      width: get_px(309);
+    }
+
+    a {
+      display: block;
+
+      @include min-screen() {
+        @include hover;
+      }
+
+      &:not(:first-of-type) {
+        margin-top: get_vw(15);
+
+        @include min-screen() {
+          margin-top: get_px(15);
+        }
+      }
+    }
+  }
+
+  &__app-spec {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: get_vw(20);
+    margin: get_vw(48) auto 0;
+    width: get_vw(560);
+
+    @include min-screen() {
+      gap: get_px(20);
+      margin-top: get_px(48);
+      width: get_px(560);
+    }
+
+    dt,
+    dd {
+      font-family: $font_base;
+      font-size: get_vw(24);
+      line-height: calc(28 / 24);
+
+      @include min-screen() {
+        font-size: get_px(24);
+      }
+    }
+
+    dt {
+      font-weight: $w_bold;
+    }
+
+    dd {
+      font-weight: $w_regular;
+    }
+  }
+
+  &__app-notes {
+    margin: get_vw(40) auto 0;
+    width: get_vw(560);
+    padding-left: 1.02em;
+
+    @include min-screen() {
+      margin-top: get_px(40);
+      width: get_px(560);
+    }
+
+    li {
+      color: #535353;
+      font-family: $font_base;
+      font-size: get_vw(18);
+      line-height: calc(24 / 18);
+      letter-spacing: 0.02em;
+      text-indent: -1.02em;
+
+      @include min-screen() {
+        font-size: get_px(18);
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: get_vw(48) get_vw(30);
+    border-top: solid get_vw(4) $c_black;
+    border-bottom: solid get_vw(4) $c_black;
+    margin-top: get_vw(60);
+
+    @include min-screen() {
+      padding: get_px(48) get_px(30);
+      border-top-width: get_px(4);
+      border-bottom-width: get_px(4);
+      margin-top: get_px(60);
+    }
+
+    a {
+      display: block;
+      font-family: $font_base;
+      font-size: get_vw(18);
+      font-weight: $w_bold;
+
+      @include min-screen() {
+        font-size: get_px(18);
+        @include hover;
+      }
+    }
+  }
+
+  &__btm {
+    padding: get_vw(48) get_vw(30) get_vw(38);
+
+    @include min-screen() {
+      padding: get_px(48) get_px(30) get_px(38);
+    }
+  }
+
+  &__btm-logo {
+    @include center;
+    flex-wrap: wrap;
+    gap: get_vw(27) get_vw(43);
+    padding: 0 get_vw(110);
+
+    @include min-screen() {
+      gap: get_px(27) get_px(43);
+      padding: 0 get_px(100);
+    }
+
+    a {
+      display: block;
+
+      @include min-screen() {
+        @include hover;
+      }
+
+      &:first-of-type {
+        width: get_vw(336);
+
+        @include min-screen() {
+          width: get_px(336);
+        }
+      }
+
+      &:nth-of-type(2) {
+        width: get_vw(113);
+
+        @include min-screen() {
+          width: get_px(113);
+        }
+      }
+
+      &:last-of-type {
+        width: get_vw(171);
+
+        @include min-screen() {
+          width: get_px(171);
+        }
+      }
+    }
+  }
+
+  &__btm-copy {
+    font-family: $font_base;
+    font-size: get_vw(20);
+    font-weight: $w_regular;
+    font-feature-settings: 'palt';
+    text-align: center;
+    margin-top: get_vw(50);
+
+    @include min-screen() {
+      font-size: get_px(20);
+      margin-top: get_px(50);
+    }
+
+    span {
+      display: block;
+      font-size: get_vw(18);
+      margin-top: get_vw(30);
+
+      @include min-screen() {
+        font-size: get_px(18);
+        margin-top: get_px(30);
+      }
+    }
+  }
 }
