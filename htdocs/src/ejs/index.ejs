@@ -45,88 +45,96 @@ var myMeta = meta[lang][pageID];
                 <p class="top-player__pass-ttl">PLAYER PASS</p>
                 <dl class="top-player__identity">
                   <dt>ID</dt>
-                  <dd class="id">1001</dd>
+                  <dd class="top-player__identity-id">1001</dd>
                   <dt>NAME</dt>
-                  <dd class="name">新人スタッフ</dd>
+                  <dd class="top-player__identity-name">新人スタッフ</dd>
                 </dl>
                 <dl class="top-player__identity">
                   <dt>SINCE</dt>
-                  <dd class="join"><span>2016.01.08</span> -</dd>
+                  <dd class="top-player__identity-join">
+                    <span>2016.01.08</span> -
+                  </dd>
                 </dl>
               </div>
             </div>
             <div class="top-player__data">
               <div class="top-player__data-block">
-                <h2>
+                <h2 class="top-player__data-h2">
                   <img
                     src="<%= relative_path %>assets/img/ttl_data_1.png"
                     alt="DATA 01 プレイ記録"
                   >
                 </h2>
                 <div class="top-player__data-inner">
-                  <dl class="top-player__data-item">
-                    <dt>ログイン日数</dt>
-                    <dd>
-                      <p><span class="txt-number">3052</span> 日</p>
-                    </dd>
-                  </dl>
-                  <dl class="top-player__data-item">
-                    <dt>読破済みストーリー</dt>
-                    <dd>
-                      <ul>
+                  <div class="top-player__data-item">
+                    <h3>ログイン日数</h3>
+                    <div class="top-player__data-dtl">
+                      <p class="top-player__data-txt">
+                        <span class="number">3052</span> 日
+                      </p>
+                    </div>
+                  </div>
+                  <div class="top-player__data-item">
+                    <h3>読了済みストーリー</h3>
+                    <div class="top-player__data-dtl">
+                      <ul class="top-player__data-list">
                         <li>
-                          <p class="list-ttl">メイン<br>ストーリー</p>
-                          <p><span class="txt-number">40</span> 話</p>
+                          <p>メイン<br>ストーリー</p>
+                          <p><span class="number">40</span> 話</p>
                         </li>
                         <li>
-                          <p class="list-ttl">バンド<br>ストーリー</p>
-                          <p><span class="txt-number">5</span> 話</p>
+                          <p>バンド<br>ストーリー</p>
+                          <p><span class="number">5</span> 話</p>
                         </li>
                         <li>
-                          <p class="list-ttl">イベント<br>ストーリー</p>
-                          <p><span class="txt-number">442</span> 話</p>
+                          <p>イベント<br>ストーリー</p>
+                          <p><span class="number">442</span> 話</p>
                         </li>
                       </ul>
-                    </dd>
-                  </dl>
-                  <dl class="top-player__data-item">
-                    <dt>ラウンジ会話視聴</dt>
-                    <dd>
-                      <p><span class="txt-number">72</span> 回</p>
-                    </dd>
-                  </dl>
+                    </div>
+                  </div>
+                  <div class="top-player__data-item">
+                    <h3>ラウンジ会話視聴</h3>
+                    <div class="top-player__data-dtl">
+                      <p class="top-player__data-txt">
+                        <span class="number">72</span> 回
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="top-player__data-block">
-                <h2>
+                <h2 class="top-player__data-h2">
                   <img
                     src="<%= relative_path %>assets/img/ttl_data_2.png"
-                    alt="DATA 02 メンバー"
+                    alt="DATA 02 キャラクター&メンバー"
                   >
                 </h2>
                 <div class="top-player__data-inner">
-                  <dl class="top-player__data-item">
-                    <dt>集めたカード</dt>
-                    <dd>
-                      <p><span class="txt-number">512 / 780</span> 枚</p>
-                    </dd>
-                  </dl>
-                  <dl class="top-player__data-item">
-                    <dt>一番集めているメンバー</dt>
-                    <dd>
-                      <p class="txt-name">戸山 香澄</p>
-                    </dd>
-                  </dl>
-                  <dl class="top-player__data-item">
-                    <dt>最初に引いたメンバー</dt>
-                    <dd>
-                      <p class="txt-name">戸山 香澄</p>
-                      <div class="card">
+                  <div class="top-player__data-item">
+                    <h3>集めたメンバー</h3>
+                    <div class="top-player__data-dtl">
+                      <p class="top-player__data-txt">
+                        <span class="number">512 / 780</span> 枚
+                      </p>
+                    </div>
+                  </div>
+                  <div class="top-player__data-item">
+                    <h3>一番集めているキャラクター</h3>
+                    <div class="top-player__data-dtl">
+                      <p class="top-player__data-name">戸山 香澄</p>
+                    </div>
+                  </div>
+                  <div class="top-player__data-item">
+                    <h3>最初に引いたメンバー</h3>
+                    <div class="top-player__data-dtl">
+                      <p class="top-player__data-name">戸山 香澄</p>
+                      <div class="top-player__data-card">
                         <span class="card-star">★★★</span>
                         <p class="card-name">約束のキャンディ</p>
                       </div>
-                    </dd>
-                  </dl>
+                    </div>
+                  </div>
                 </div>
                 <div class="top-player__data-chara">
                   <span>
@@ -138,13 +146,13 @@ var myMeta = meta[lang][pageID];
                   <p>
                     <img
                       src="<%= relative_path %>assets/img/member_copy.png"
-                      alt="あなたが一番集めているのはこのメンバー！"
+                      alt="あなたが一番集めているのはこのキャラクター！"
                     >
                   </p>
                 </div>
               </div>
               <div class="top-player__data-block">
-                <h2>
+                <h2 class="top-player__data-h2">
                   <img
                     src="<%= relative_path %>assets/img/ttl_data_3.png"
                     alt="DATA 03 楽曲クリア率"
@@ -208,50 +216,93 @@ var myMeta = meta[lang][pageID];
                 </div>
               </div>
               <div class="top-player__data-block">
-                <h2>
+                <h2 class="top-player__data-h2">
                   <img
                     src="<%= relative_path %>assets/img/ttl_data_4.png"
                     alt="DATA 04 その他"
                   >
                 </h2>
                 <div class="top-player__data-inner">
-                  <dl class="top-player__data-item">
-                    <dt>最初にフルコンボした楽曲</dt>
-                    <dd>
-                      <div class="song">
-                        <div class="song-level" data-level="EASY">
+                  <div class="top-player__data-item">
+                    <h3>最初にフルコンボした楽曲</h3>
+                    <div class="top-player__data-dtl">
+                      <div class="top-player__data-song">
+                        <div class="level" data-level="EASY">
                           <p>ときめきエクスペリエンス！</p>
                         </div>
-                        <div class="song-level" data-level="NORMAL">
+                        <div class="level" data-level="NORMAL">
                           <p>キラキラだとか夢だとか ～Sing Girls～</p>
                         </div>
-                        <div class="song-level" data-level="HARD">
+                        <div class="level" data-level="HARD">
                           <p>YAPPY！SCHOOL CARNIVAL☆彡</p>
                         </div>
-                        <div class="song-level" data-level="EXPERT">
+                        <div class="level" data-level="EXPERT">
                           <p>What's the POPIPA!?</p>
                         </div>
-                        <div class="song-level" data-level="SPECIAL">
+                        <div class="level" data-level="SPECIAL">
                           <p>誓いのWingbeat</p>
                         </div>
                       </div>
-                    </dd>
-                  </dl>
-                  <dl class="top-player__data-item">
-                    <dt>初めてTOP10000入りしたイベント</dt>
-                    <dd>
-                      <p>パスパレ探検隊～無人島を征くアイドル～</p>
-                      <p><span>（4192位）</span></p>
-                    </dd>
-                  </dl>
-                  <dl class="top-player__data-item">
-                    <dt>あなたと同期の楽曲</dt>
-                    <dd><p>オトモダチフィルム</p></dd>
-                  </dl>
+                    </div>
+                  </div>
+                  <div class="top-player__data-item">
+                    <h3>初めてTOP10000入りしたイベント</h3>
+                    <div class="top-player__data-dtl">
+                      <p class="top-player__data-txt txt-medium">
+                        パスパレ探検隊～無人島を征くアイドル～
+                        <span>（4192位）</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="top-player__data-item">
+                    <h3>あなたと同期の楽曲</h3>
+                    <div class="top-player__data-dtl">
+                      <p class="top-player__data-txt txt-medium">
+                        オトモダチフィルム
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
+          <section class="top-flyer">
+            <span class="common__line"></span>
+            <div class="common__inner">
+              <h2 class="top-flyer__h2">
+                あなたの<span>社内報</span>はこちら！
+              </h2>
+              <div class="top-flyer__img">
+                <img
+                  src="<%= relative_path %>assets/img/flyer/image.png"
+                  alt="あなたの社内報はこちら！"
+                >
+              </div>
+              <p class="top-flyer__txt">
+                <img
+                  src="<%= relative_path %>assets/img/txt_save.png"
+                  alt="画像を長押しして保存してね！"
+                >
+              </p>
+            </div>
+          </section>
+          <div class="top__share">
+            <h2>
+              <img
+                src="<%= relative_path %>assets/img/ttl_share.png"
+                alt="あなたの社内報をXでシェアしよう！"
+              >
+            </h2>
+            <a href="" target="_blank" class="top__share-btn">
+              <span>
+                <img src="<%= relative_path %>assets/img/icon_x.png" alt="X">
+              </span>
+              でシェアする
+            </a>
+            <p class="top__share-txt">
+              ※画像は自動でポストに反映されません。<br>カードを添付してポストしてください。
+            </p>
+          </div>
           <%- include( `${relative_path}_partial/_footer`,{lang:lang,pageID:pageID,relative_path:relative_path}) %>
         </div>
       </article>

@@ -2,4 +2,94 @@
 @use './setting/mixin' as *;
 
 .top {
+  &__share {
+    margin-top: get_vw(60);
+
+    @include min-screen() {
+      margin-top: get_px(60);
+    }
+  }
+
+  &__share-btn {
+    background-color: $c_black;
+    border-radius: get_vw(43);
+    color: $c_white;
+    font-family: $font_zenkaku;
+    font-size: get_vw(32);
+    font-weight: $w_black;
+    margin: get_vw(15) auto 0;
+    width: get_vw(392);
+    height: get_vw(88);
+    @include center;
+    gap: get_vw(7);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    @include min-screen() {
+      border-radius: get_px(43);
+      font-size: get_px(32);
+      margin-top: get_px(15);
+      width: get_px(392);
+      height: get_px(88);
+      gap: get_px(7);
+      @include hover;
+    }
+
+    span {
+      display: block;
+      width: get_vw(31);
+      padding-bottom: get_vw(2);
+
+      @include min-screen() {
+        width: get_px(31);
+        padding-bottom: get_px(2);
+      }
+    }
+
+    @include before {
+      background-color: rgba($c_white, 0.2);
+      clip-path: polygon(0 0, 100% 0%, 55% 100%, 0% 100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: get_vw(246);
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+
+      @include min-screen() {
+        width: get_px(246);
+      }
+    }
+
+    @include after {
+      border: get_vw(2) solid rgba($c_white, 0.2);
+      border-radius: get_vw(43);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+
+      @include min-screen() {
+        border-radius: get_px(43);
+        border-width: get_px(2);
+      }
+    }
+  }
+
+  &__share-txt {
+    font-family: $font_zenkaku;
+    font-size: get_vw(24);
+    line-height: calc(32 / 24);
+    text-align: center;
+    margin-top: get_vw(28);
+
+    @include min-screen() {
+      font-size: get_px(24);
+      margin-top: get_px(28);
+    }
+  }
 }

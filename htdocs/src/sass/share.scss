@@ -3,5 +3,6 @@
 @use 'common/common';
 @use 'footer/footer';
 
-// @use 'top/top';
+@use 'top/top';
 @use 'top/top-player';
+@use 'top/top-flyer';

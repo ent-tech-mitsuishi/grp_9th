@@ -1,0 +1,60 @@
+@use './setting/setting' as *;
+@use './setting/mixin' as *;
+
+.top-flyer {
+  &__h2 {
+    color: $c_black;
+    font-family: $font_zenkaku;
+    font-size: get_vw(56);
+    font-weight: $w_black;
+    margin-top: get_vw(80);
+    padding-left: get_vw(18);
+    padding-bottom: get_vw(30);
+    position: relative;
+    z-index: 1;
+
+    @include min-screen() {
+      font-size: get_px(56);
+      margin-top: get_px(80);
+      padding-left: get_px(18);
+      padding-bottom: get_px(30);
+    }
+
+    span {
+      color: $c_red;
+    }
+
+    @include after {
+      background: transparent url(../img/parts_ink.png) no-repeat center/contain;
+      width: get_vw(679);
+      height: get_vw(17);
+      position: absolute;
+      bottom: 0;
+      left: get_vw(2);
+
+      @include min-screen() {
+        width: get_px(679);
+        height: get_px(17);
+        left: get_px(2);
+      }
+    }
+  }
+  &__img {
+    border: get_vw(2) solid $c_black;
+    margin-top: get_vw(80);
+
+    @include min-screen() {
+      border-width: get_px(2);
+      margin-top: get_px(80);
+    }
+  }
+  &__txt {
+    margin: get_vw(20) auto 0;
+    width: get_vw(427);
+
+    @include min-screen() {
+      margin-top: get_px(20);
+      width: get_px(427);
+    }
+  }
+}
