@@ -1,0 +1,161 @@
+@use './setting/setting' as *;
+@use './setting/mixin' as *;
+
+.common {
+  &__main {
+    position: relative;
+    z-index: 1;
+
+    @include max-screen() {
+      background: transparent url(../img/common/bg_repeat.png) repeat-y top
+        center;
+      background-size: 100% auto;
+      width: 100%;
+    }
+  }
+
+  &__loading {
+    background-color: $c_red;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transform: translate3d(0, 0, 0);
+
+    &.js--hide {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 800ms;
+    }
+  }
+
+  &__loading-item {
+    width: get_vw(620);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include min-screen() {
+      width: get_px(690);
+    }
+  }
+
+  &__bg {
+    @include min-screen() {
+      display: block;
+      background: transparent url(../img/common/bg_pc.png) no-repeat center
+        center;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+
+  &__line {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    height: get_vw(16);
+    position: relative;
+    z-index: 1;
+
+    @include min-screen() {
+      height: get_px(16);
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      background-color: $c_black;
+    }
+
+    &:before {
+      height: get_vw(8);
+
+      @include min-screen() {
+        height: get_px(8);
+      }
+    }
+
+    &:after {
+      height: get_vw(4);
+
+      @include min-screen() {
+        height: get_px(4);
+      }
+    }
+
+    &.rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__article {
+    width: 100%;
+    margin: 0 auto;
+
+    @include min-screen() {
+      background: transparent url(../img/common/bg_repeat.png) repeat-y top
+        center;
+      background-size: 100% auto;
+      width: get_px(750);
+      height: 100vh;
+    }
+  }
+
+  &__wrap {
+    width: 100%;
+
+    @include min-screen() {
+      height: 100%;
+      @include scrollbar_none;
+    }
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    padding: get_vw(20) get_vw(30) 0;
+    margin: 0 auto get_vw(5);
+
+    @include min-screen() {
+      padding: get_px(20) get_px(30) 0;
+      margin: 0 auto get_px(5);
+    }
+  }
+
+  &__label-name,
+  &__label-date {
+    font-family: $font_baskerville;
+    font-size: get_vw(16);
+    font-weight: $w_bold;
+    letter-spacing: -0.075em;
+
+    @include min-screen() {
+      font-size: get_px(16);
+    }
+  }
+
+  &__h1 {
+    width: 100%;
+  }
+
+  &__inner {
+    padding: 0 get_vw(30);
+
+    @include min-screen() {
+      padding: 0 get_px(30);
+    }
+  }
+}

@@ -14,28 +14,299 @@ var myMeta = meta[lang][pageID];
   <body>
     <%-include(`${relative_path}_partial/_body-after`,{lang:lang,pageID:pageID,relative_path:relative_path})%>
     <%# ここから下にhtml書いてね このコメントは反映されません%>
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <div class="test">pppp</div>
-        </div>
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
+    <main class="common__main">
+      <div class="common__bg sp-none"></div>
+      <div class="common__loading">
+        <span class="common__loading-item"></span>
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
-    </div>
+      <article class="common__article">
+        <div class="common__wrap">
+          <div class="common__label">
+            <p class="common__label-name">NEWSLETTER</p>
+            <p class="common__label-date">2026.3.16</p>
+          </div>
+          <span class="common__line rotate"></span>
+          <h1 class="common__h1">
+            <img
+              src="<%= relative_path %>assets/img/common/img_mv.png"
+              alt="9周年 PROJECT LIVEHOUSE CIRCLE 社内報 NEWSLETTER"
+            >
+          </h1>
+          <span class="common__line"></span>
+          <section class="top-player">
+            <h2 class="top-player__ttl">
+              <img
+                src="<%= relative_path %>assets/img/ttl_history.png"
+                alt="これまでの活動履歴をお届け！"
+              >
+            </h2>
+            <div class="common__inner">
+              <div class="top-player__pass">
+                <p class="top-player__pass-ttl">PLAYER PASS</p>
+                <dl class="top-player__identity">
+                  <dt>ID</dt>
+                  <dd class="top-player__identity-id">1001</dd>
+                  <dt>NAME</dt>
+                  <dd class="top-player__identity-name">新人スタッフ</dd>
+                </dl>
+                <dl class="top-player__identity">
+                  <dt>SINCE</dt>
+                  <dd class="top-player__identity-join">
+                    <span>2016.01.08</span> -
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="top-player__data">
+              <div class="top-player__data-block">
+                <h2 class="top-player__data-h2">
+                  <img
+                    src="<%= relative_path %>assets/img/ttl_data_1.png"
+                    alt="DATA 01 プレイ記録"
+                  >
+                </h2>
+                <div class="top-player__data-inner">
+                  <div class="top-player__data-item">
+                    <h3>ログイン日数</h3>
+                    <div class="top-player__data-dtl">
+                      <p class="top-player__data-txt">
+                        <span class="number">3052</span> 日
+                      </p>
+                    </div>
+                  </div>
+                  <div class="top-player__data-item">
+                    <h3>読了済みストーリー</h3>
+                    <div class="top-player__data-dtl">
+                      <ul class="top-player__data-list">
+                        <li>
+                          <p>メイン<br>ストーリー</p>
+                          <p><span class="number">40</span> 話</p>
+                        </li>
+                        <li>
+                          <p>バンド<br>ストーリー</p>
+                          <p><span class="number">5</span> 話</p>
+                        </li>
+                        <li>
+                          <p>イベント<br>ストーリー</p>
+                          <p><span class="number">442</span> 話</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="top-player__data-item">
+                    <h3>ラウンジ会話視聴</h3>
+                    <div class="top-player__data-dtl">
+                      <p class="top-player__data-txt">
+                        <span class="number">72</span> 回
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="top-player__data-block">
+                <h2 class="top-player__data-h2">
+                  <img
+                    src="<%= relative_path %>assets/img/ttl_data_2.png"
+                    alt="DATA 02 キャラクター&メンバー"
+                  >
+                </h2>
+                <div class="top-player__data-inner">
+                  <div class="top-player__data-item">
+                    <h3>集めたメンバー</h3>
+                    <div class="top-player__data-dtl">
+                      <p class="top-player__data-txt">
+                        <span class="number">512 / 780</span> 枚
+                      </p>
+                    </div>
+                  </div>
+                  <div class="top-player__data-item">
+                    <h3>一番集めているキャラクター</h3>
+                    <div class="top-player__data-dtl">
+                      <p class="top-player__data-name">戸山 香澄</p>
+                    </div>
+                  </div>
+                  <div class="top-player__data-item">
+                    <h3>最初に引いたメンバー</h3>
+                    <div class="top-player__data-dtl">
+                      <p class="top-player__data-name">戸山 香澄</p>
+                      <div class="top-player__data-card">
+                        <span class="card-star">★★★</span>
+                        <p class="card-name">約束のキャンディ</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="top-player__data-chara">
+                  <span>
+                    <img
+                      src="<%= relative_path %>assets/img/member/1/member.png"
+                      alt="戸山 香澄"
+                    >
+                  </span>
+                  <p>
+                    <img
+                      src="<%= relative_path %>assets/img/member_copy.png"
+                      alt="あなたが一番集めているのはこのキャラクター！"
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="top-player__data-block">
+                <h2 class="top-player__data-h2">
+                  <img
+                    src="<%= relative_path %>assets/img/ttl_data_3.png"
+                    alt="DATA 03 楽曲クリア率"
+                  >
+                </h2>
+                <div class="common__inner">
+                  <div class="top-player__graph">
+                    <div class="top-player__graph-wrap">
+                      <div
+                        class="top-player__graph-item is-easy"
+                        style="height: 98.4%"
+                      >
+                        <p class="top-player__graph-score">
+                          <span>740</span>
+                          <span>752</span>
+                        </p>
+                        <p class="top-player__graph-percent">98.4%</p>
+                      </div>
+                      <div
+                        class="top-player__graph-item is-normal"
+                        style="height: 86.6%"
+                      >
+                        <p class="top-player__graph-score">
+                          <span>651</span>
+                          <span>752</span>
+                        </p>
+                        <p class="top-player__graph-percent">86.6%</p>
+                      </div>
+                      <div
+                        class="top-player__graph-item is-hard"
+                        style="height: 66.6%"
+                      >
+                        <p class="top-player__graph-score">
+                          <span>501</span>
+                          <span>752</span>
+                        </p>
+                        <p class="top-player__graph-percent">66.6%</p>
+                      </div>
+                      <div
+                        class="top-player__graph-item is-expert"
+                        style="height: 12.9%"
+                      >
+                        <p class="top-player__graph-score">
+                          <span>97</span>
+                          <span>752</span>
+                        </p>
+                        <p class="top-player__graph-percent">12.9%</p>
+                      </div>
+                      <div
+                        class="top-player__graph-item is-special"
+                        style="height: 3.5%"
+                      >
+                        <p class="top-player__graph-score">
+                          <span>15</span>
+                          <span>431</span>
+                        </p>
+                        <p class="top-player__graph-percent">3.5%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="top-player__data-block">
+                <h2 class="top-player__data-h2">
+                  <img
+                    src="<%= relative_path %>assets/img/ttl_data_4.png"
+                    alt="DATA 04 その他"
+                  >
+                </h2>
+                <div class="top-player__data-inner">
+                  <div class="top-player__data-item">
+                    <h3>最初にフルコンボした楽曲</h3>
+                    <div class="top-player__data-dtl">
+                      <div class="top-player__data-song">
+                        <div class="level" data-level="EASY">
+                          <p>ときめきエクスペリエンス！</p>
+                        </div>
+                        <div class="level" data-level="NORMAL">
+                          <p>キラキラだとか夢だとか ～Sing Girls～</p>
+                        </div>
+                        <div class="level" data-level="HARD">
+                          <p>YAPPY！SCHOOL CARNIVAL☆彡</p>
+                        </div>
+                        <div class="level" data-level="EXPERT">
+                          <p>What's the POPIPA!?</p>
+                        </div>
+                        <div class="level" data-level="SPECIAL">
+                          <p>誓いのWingbeat</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="top-player__data-item">
+                    <h3>初めてTOP10000入りしたイベント</h3>
+                    <div class="top-player__data-dtl">
+                      <p class="top-player__data-txt txt-medium">
+                        パスパレ探検隊～無人島を征くアイドル～
+                        <span>（4192位）</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="top-player__data-item">
+                    <h3>あなたと同期の楽曲</h3>
+                    <div class="top-player__data-dtl">
+                      <p class="top-player__data-txt txt-medium">
+                        オトモダチフィルム
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="top-flyer">
+            <span class="common__line"></span>
+            <div class="common__inner">
+              <h2 class="top-flyer__h2">
+                あなたの<span>社内報</span>はこちら！
+              </h2>
+              <div class="top-flyer__img">
+                <img
+                  src="<%= relative_path %>assets/img/flyer/image.png"
+                  alt="あなたの社内報はこちら！"
+                >
+              </div>
+              <p class="top-flyer__txt">
+                <img
+                  src="<%= relative_path %>assets/img/txt_save.png"
+                  alt="画像を長押しして保存してね！"
+                >
+              </p>
+            </div>
+          </section>
+          <div class="top__share">
+            <h2>
+              <img
+                src="<%= relative_path %>assets/img/ttl_share.png"
+                alt="あなたの社内報をXでシェアしよう！"
+              >
+            </h2>
+            <a href="" target="_blank" class="top__share-btn">
+              <span>
+                <img src="<%= relative_path %>assets/img/icon_x.png" alt="X">
+              </span>
+              でシェアする
+            </a>
+            <p class="top__share-txt">
+              ※画像は自動でポストに反映されません。<br>カードを添付してポストしてください。
+            </p>
+          </div>
+          <%- include( `${relative_path}_partial/_footer`,{lang:lang,pageID:pageID,relative_path:relative_path}) %>
+        </div>
+      </article>
+    </main>
     <%# ここから上にhtml書いてね このコメントは反映されません%>
     <%- include( `${relative_path}_partial/_foot`,{lang:lang,pageID:pageID,relative_path:relative_path}) %>
   </body>

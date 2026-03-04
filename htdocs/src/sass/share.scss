@@ -1,10 +1,8 @@
 @use 'setting/base';
 
-// ここ以下は最初に削除してください。
-// template
-@use 'template/template';
-@use 'template/template-another';
+@use 'common/common';
+@use 'footer/footer';
 
-.test {
-  margin-top: 100px;
-}
+@use 'top/top';
+@use 'top/top-player';
+@use 'top/top-flyer';

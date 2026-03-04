@@ -14,11 +14,24 @@
  %>
 <head>
   <meta charset="utf-8">
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WKM95WS');
+  </script>
+  <!-- End Google Tag Manager -->
   <!-- title -->
   <title><%= title %></title>
   <meta name="viewport" content="width=device-width">
   <meta name="description" content="<%- commonMeta.description %>">
-  <meta name="keywords" content="<%- commonMeta.keywords %>">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<%= title %>">
   <meta name="twitter:description" content="<%- commonMeta.description %>">
@@ -35,7 +48,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400..700&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700;900&display=swap"
     rel="stylesheet"
   >
   <!-- favicon -->
