@@ -7,7 +7,7 @@
     z-index: 1;
 
     @include max-screen() {
-      background: transparent url(../img/common/bg_repeat.png) repeat-y top
+      background: transparent url(../img/common/bg_repeat.jpg) repeat-y top
         center;
       background-size: 100% auto;
       width: 100%;
@@ -106,11 +106,9 @@
     margin: 0 auto;
 
     @include min-screen() {
-      background: transparent url(../img/common/bg_repeat.png) repeat-y top
-        center;
-      background-size: 100% auto;
       width: get_px(750);
       height: 100vh;
+      outline: get_px(8) solid $c_red;
     }
   }
 
@@ -120,6 +118,15 @@
     @include min-screen() {
       height: 100%;
       @include scrollbar_none;
+    }
+  }
+
+  &__container {
+    @include min-screen() {
+      background: transparent url(../img/common/bg_repeat.jpg) repeat-y top
+        center;
+      background-size: 100% auto;
+      width: 100%;
     }
   }
 
