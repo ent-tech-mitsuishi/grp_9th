@@ -1,0 +1,58 @@
+<%
+// ページのIDを記述
+var pageID = "error";
+// 言語設定
+var lang = "ja";
+// ファイルの相対パス
+var relative_path = "../";
+// このページのmeta情報
+var myMeta = meta[lang][pageID];
+%>
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+  <%-include(`${relative_path}_partial/_head`,{lang:lang,pageID:pageID,relative_path:relative_path})%>
+  <body data-page="<%= pageID %>">
+    <%-include(`${relative_path}_partial/_body-after`,{lang:lang,pageID:pageID,relative_path:relative_path})%>
+    <%# ここから下にhtml書いてね このコメントは反映されません%>
+    <main class="common__main">
+      <div class="common__bg sp-none"></div>
+      <article class="common__article">
+        <div class="common__wrap">
+          <div class="common__container">
+            <div class="common__label">
+              <p class="common__label-name">NEWSLETTER</p>
+              <p class="common__label-date">2026.3.16</p>
+            </div>
+            <span class="common__line rotate"></span>
+            <h1 class="common__h1">
+              <img
+                src="<%= relative_path %>assets/img/common/img_mv.png"
+                alt="9周年 PROJECT LIVEHOUSE CIRCLE 社内報 NEWSLETTER"
+              >
+            </h1>
+            <span class="common__line"></span>
+            <div class="error__wrap">
+              <div class="common__inner">
+                <p class="error__text">
+                  本コンテンツは<br>アプリからの遷移のみ閲覧ができます。<br>お手数ですが<span>アプリ内のバナー</span>から<br>アクセスください。
+                </p>
+                <div class="error__img">
+                  <img
+                    src="<%= relative_path %>assets/img/common/img_error.png"
+                    alt="アプリ内バナー"
+                  >
+                </div>
+                <a href="" target="_blank" class="error__btn">
+                  <span>ゲームを起動する</span>
+                </a>
+              </div>
+            </div>
+            <%- include( `${relative_path}_partial/_footer`,{lang:lang,pageID:pageID,relative_path:relative_path}) %>
+          </div>
+        </div>
+      </article>
+    </main>
+    <%# ここから上にhtml書いてね このコメントは反映されません%>
+    <%- include( `${relative_path}_partial/_foot`,{lang:lang,pageID:pageID,relative_path:relative_path}) %>
+  </body>
+</html>
