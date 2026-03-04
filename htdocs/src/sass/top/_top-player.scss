@@ -514,4 +514,139 @@
       }
     }
   }
+
+  &__graph {
+    width: 100%;
+    height: get_vw(531);
+    margin-bottom: get_vw(100);
+    position: relative;
+    z-index: 1;
+
+    @include min-screen() {
+      height: get_px(531);
+      margin-bottom: get_px(100);
+    }
+
+    @include before {
+      background: transparent url(../img/graph.png) no-repeat center top;
+      background-size: get_vw(690) auto;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      @include min-screen() {
+        background-size: get_px(690) auto;
+        height: get_px(531);
+      }
+    }
+  }
+
+  &__graph-wrap {
+    position: absolute;
+    z-index: 2;
+    bottom: get_vw(49);
+    height: get_vw(410);
+    width: 100%;
+  }
+
+  &__graph-item {
+    background-color: $c_black;
+    width: get_vw(70);
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+
+    &.is-easy {
+      background-color: #a6c4ff;
+      left: get_vw(108);
+    }
+
+    &.is-normal {
+      background-color: #93ffc1;
+      left: get_vw(226);
+    }
+
+    &.is-hard {
+      background-color: #ffeb97;
+      left: get_vw(350);
+    }
+
+    &.is-expert {
+      background-color: #ffc4c4;
+      left: get_vw(472);
+    }
+
+    &.is-special {
+      background-color: #ffa9e8;
+      left: get_vw(590);
+    }
+  }
+
+  &__graph-score {
+    font-family: $font_roboto;
+    font-size: get_vw(33);
+    font-weight: $w_bold;
+    text-align: center;
+    letter-spacing: -0.05em;
+    position: absolute;
+    top: get_vw(-90);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    @include min-screen() {
+      font-size: get_px(33);
+      top: get_px(-90);
+    }
+
+    span {
+      display: block;
+
+      &:last-of-type {
+        position: relative;
+        padding-top: get_vw(4);
+
+        @include min-screen() {
+          padding-top: get_px(4);
+        }
+
+        @include before {
+          background-color: $c_black;
+          width: get_vw(60);
+          height: get_px(4);
+          position: absolute;
+          top: get_vw(-2);
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 1;
+
+          @include min-screen() {
+            width: get_px(60);
+            height: get_px(4);
+            top: get_px(-2);
+          }
+        }
+      }
+    }
+  }
+
+  &__graph-percent {
+    font-family: $font_roboto;
+    font-size: get_vw(42);
+    font-weight: $w_black;
+    text-align: center;
+    letter-spacing: -0.05em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 1;
+
+    @include min-screen() {
+      font-size: get_px(42);
+    }
+  }
 }

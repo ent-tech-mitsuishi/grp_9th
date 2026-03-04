@@ -32,13 +32,15 @@
   }
 
   &__loading-item {
-    width: 100%;
+    width: get_vw(620);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    // width: get_vw(750);
-    // height: get_vw(750);
+
+    @include min-screen() {
+      width: get_px(690);
+    }
   }
 
   &__bg {
