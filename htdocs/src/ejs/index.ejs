@@ -8,9 +8,143 @@ var relative_path = "./";
 // このページのmeta情報
 var myMeta = meta[lang][pageID];
 %>
+<?php
+// パラメータがない場合はエラーページにリダイレクト
+if (!isset($_GET['json_param']) || $_GET['json_param'] === '') {
+  header('Location: ./error/');
+  exit;
+}
+
+// json_param を復号・展開して PHP 配列として取得
+$rawJson      = null;
+$parsedData   = null;
+$decodeError  = null;
+
+function base64url_decode(string $data)
+{
+  $b64 = strtr($data, '-_', '+/');
+  $pad = strlen($b64) % 4;
+  if ($pad > 0) {
+    $b64 .= str_repeat('=', 4 - $pad);
+  }
+  return base64_decode($b64, true);
+}
+
+function decode_json_param(string $param)
+{
+  $cipher = base64url_decode($param);
+  if ($cipher === false) {
+    throw new Exception('Base64 URL デコードに失敗しました。');
+  }
+
+  $key = 'gbp_9th_Z2JwXzl0';
+  $iv  = 'gbp_9th_oAa0lzXw';
+
+  while (openssl_error_string() !== false) {}
+
+  $plain = openssl_decrypt($cipher, 'AES-128-CBC', $key, OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING, $iv);
+
+  if ($plain === false) {
+    throw new Exception('AES 復号に失敗しました。');
+  }
+
+  if (!function_exists('bzdecompress')) {
+    throw new Exception('bzip2(bz2) 拡張が有効ではありません。');
+  }
+
+  $decompressed = bzdecompress($plain);
+  if (!is_string($decompressed)) {
+    throw new Exception("bzip2 解凍に失敗しました。");
+  }
+
+  return $decompressed;
+}
+
+function formatDate(string $dateStr): string
+{
+  if (strlen($dateStr) !== 8) return $dateStr;
+  return substr($dateStr, 0, 4) . '年' . substr($dateStr, 4, 2) . '月' . substr($dateStr, 6, 2) . '日';
+}
+
+function getDifficultyName(int $level): string
+{
+  $names = [1 => 'EASY', 2 => 'NORMAL', 3 => 'HARD', 4 => 'EXPERT', 5 => 'SPECIAL'];
+  return $names[$level] ?? "Lv.{$level}";
+}
+
+function getStoryTypeName(int $type): string
+{
+  $names = [1 => 'メインストーリー', 2 => 'バンドストーリー', 3 => 'イベントストーリー'];
+  return $names[$type] ?? "種別{$type}";
+}
+
+function getCharacterName(int $id): string
+{
+  $characters = [
+    1 => '戸山 香澄',
+    2 => '花園 たえ',
+    3 => '牛込 りみ',
+    4 => '山吹 沙綾',
+    5 => '市ヶ谷 有咲',
+    6 => '美竹 蘭',
+    7 => '青葉 モカ',
+    8 => '上原 ひまり',
+    9 => '宇田川 巴',
+    10 => '羽沢 つぐみ',
+    11 => '弦巻 こころ',
+    12 => '瀬田 薫',
+    13 => '北沢 はぐみ',
+    14 => '松原 花音',
+    15 => '奥沢 美咲',
+    16 => '丸山 彩',
+    17 => '氷川 日菜',
+    18 => '白鷺 千聖',
+    19 => '大和 麻弥',
+    20 => '若宮 イヴ',
+    21 => '湊 友希那',
+    22 => '氷川 紗夜',
+    23 => '今井 リサ',
+    24 => '宇田川 あこ',
+    25 => '白金 燐子',
+    26 => '倉田 ましろ',
+    27 => '桐ヶ谷 透子',
+    28 => '広町 七深',
+    29 => '二葉 つくし',
+    30 => '八潮 瑠唯',
+    31 => 'レイヤ',
+    32 => 'ロック',
+    33 => 'マスキング',
+    34 => 'パレオ',
+    35 => 'チュチュ',
+    36 => '高松 燈',
+    37 => '千早 愛音',
+    38 => '要 楽奈',
+    39 => '長崎 そよ',
+    40 => '椎名 立希',
+  ];
+  return $characters[$id] ?? "キャラID:{$id}";
+}
+
+try {
+  $rawJson = decode_json_param($_GET['json_param']);
+  $parsedData = json_decode($rawJson, true);
+  if (json_last_error() !== JSON_ERROR_NONE) {
+    throw new Exception('JSON デコードに失敗しました: ' . json_last_error_msg());
+  }
+} catch (Throwable $e) {
+  header('Location: ./error/?msg=' . urlencode($e->getMessage()));
+  exit;
+}
+
+$d = $parsedData;
+$user = $d['0'] ?? [];
+?>
 <!DOCTYPE html>
 <html lang="<%= lang %>">
   <%-include(`${relative_path}_partial/_head`,{lang:lang,pageID:pageID,relative_path:relative_path})%>
+  <script>
+    window.garupa9thData = <?php echo json_encode($parsedData, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
+  </script>
   <body data-page="<%= pageID %>">
     <%-include(`${relative_path}_partial/_body-after`,{lang:lang,pageID:pageID,relative_path:relative_path})%>
     <%# ここから下にhtml書いてね このコメントは反映されません%>
@@ -275,7 +409,7 @@ var myMeta = meta[lang][pageID];
                 </h2>
                 <div class="top-flyer__img">
                   <img
-                    src="<%= relative_path %>assets/img/flyer/image.png"
+                    src=""
                     alt="あなたの社内報はこちら！"
                   >
                 </div>

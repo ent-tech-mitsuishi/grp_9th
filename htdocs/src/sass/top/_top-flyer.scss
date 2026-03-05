@@ -42,10 +42,19 @@
   &__img {
     border: get_vw(2) solid $c_black;
     margin-top: get_vw(80);
+    opacity: 0;
+
+    &.js--show {
+      opacity: 1;
+    }
 
     @include min-screen() {
       border-width: get_px(2);
       margin-top: get_px(80);
+    }
+
+    img {
+      pointer-events: auto;
     }
   }
   &__txt {
