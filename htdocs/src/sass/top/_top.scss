@@ -83,6 +83,7 @@
   &__share-txt {
     font-family: $font_zenkaku;
     font-size: get_vw(24);
+    font-weight: $w_medium;
     line-height: calc(32 / 24);
     text-align: center;
     margin-top: get_vw(28);
