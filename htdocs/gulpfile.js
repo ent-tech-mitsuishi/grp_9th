@@ -64,7 +64,6 @@ const clean = (done) => {
     `!${DEVELOP}/sitemap.xml`,
     `!${DEVELOP}/assets/**`,
   ]);
-  done();
 };
 
 // ejs
@@ -83,7 +82,7 @@ const ejsTask = (done) => {
     )
     .pipe(
       rename({
-        extname: '.html',
+        extname: '.php',
       })
     )
     .pipe(
@@ -136,11 +135,11 @@ const ejsTask = (done) => {
         max_preserve_newlines: 0,
         preserve_newlines: false,
         extra_liners: [],
-        unformatted: ['br', 'hr', 'img', 'input', 'meta', 'link', 'area', 'base', 'col', 'embed', 'source', 'track', 'wbr']
+        // Keep script contents untouched to avoid breaking embedded PHP tags.
+        unformatted: ['script', 'br', 'hr', 'img', 'input', 'meta', 'link', 'area', 'base', 'col', 'embed', 'source', 'track', 'wbr']
       })
     )
     .pipe(gulp.dest(`${DEVELOP}/`));
-  done();
 };
 
 // タスク化
@@ -177,7 +176,6 @@ const sassTask = (done) => {
       })
     )
     .pipe(gulp.dest(`${DEVELOP}/assets/css`, { sourcemaps: 'sourcemaps' }));
-  done();
 };
 
 const cssMin = () => {
@@ -217,7 +215,6 @@ const uglifyTask = (done) => {
       })
     )
     .pipe(gulp.dest(`${RELEASE}/`));
-  done();
 };
 
 // タスク化
@@ -260,7 +257,6 @@ gulp.task('webp', () => {
 
 const cleanTask = (done) => {
   return del(`${RELEASE}/`);
-  done();
 };
 
 //********************************************************
@@ -273,7 +269,6 @@ const copyTask = (done) => {
       base: `${DEVELOP}`,
     })
     .pipe(gulp.dest(`${RELEASE}/`));
-  done();
 };
 
 //********************************************************
