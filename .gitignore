@@ -1,0 +1,58 @@
+# 環境設定ファイル（機密情報を含む）
+config/production.php
+config/local.php
+*.env
+.env.local
+.env.production
+
+# アップロードファイル
+public/uploads/*
+!public/uploads/.gitkeep
+
+# ログファイル
+storage/logs/*
+!storage/logs/.gitkeep
+
+# 一時ファイル
+*.tmp
+*.log
+*.cache
+
+# OS関連
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# IDE関連
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# データベース
+*.sql
+!config/schema.sql
+localhost.sql
+
+# 依存関係（Composer）
+vendor/
+composer.lock
+
+# Node.js（もし使用する場合）
+node_modules/
+package-lock.json
+yarn.lock
+
+# Docker
+.dockerignore
+
+# バックアップファイル
+*.bak
+*.backup
+*.old

@@ -57,8 +57,6 @@ const HIGH_QUALITY_MODE = true;
 const RENDER_SCALE = HIGH_QUALITY_MODE ? 2 : 1;
 const EXPORT_MIME_TYPE = HIGH_QUALITY_MODE ? 'image/png' : 'image/jpeg';
 
-console.log("in")
-
 const GRAPH_STYLE = {
   chartLeft: 704,
   chartTop: 830,
@@ -101,29 +99,134 @@ const FONT_FACE_ROBOTO = '"Roboto"';
 const FONT_FACE_ZEN_KAKU = '"Zen Kaku Gothic Antique"';
 const FONT_FAMILY_DEFAULT = '"Noto Sans", "Noto Sans JP", sans-serif';
 const FONT_FAMILY_ROBOTO = '"Roboto", "Noto Sans", sans-serif';
-const FONT_FAMILY_ZEN_KAKU = '"Zen Kaku Gothic Antique", "Noto Sans JP", sans-serif';
+const FONT_FAMILY_ZEN_KAKU =
+  '"Zen Kaku Gothic Antique", "Noto Sans JP", sans-serif';
 const PLAYER_PASS_ANGLE = -4.2;
 
 const TEXT_LAYOUT = {
   playerPass: {
-    id: { x: 170, y: 385, size: 28, weight: 500, family: FONT_FAMILY_ROBOTO, letterSpacing: 0 },
-    name: { x: 175, y: 427, size: 36, weight: 500, family: FONT_FAMILY_ZEN_KAKU, letterSpacing: 0 },
-    since: { x: 175, y: 499, size: 28, weight: 500, family: FONT_FAMILY_ROBOTO, letterSpacing: 0 },
+    id: {
+      x: 170,
+      y: 385,
+      size: 28,
+      weight: 500,
+      family: FONT_FAMILY_ROBOTO,
+      letterSpacing: 0,
+    },
+    name: {
+      x: 175,
+      y: 427,
+      size: 36,
+      weight: 500,
+      family: FONT_FAMILY_ZEN_KAKU,
+      letterSpacing: 0,
+    },
+    since: {
+      x: 175,
+      y: 499,
+      size: 28,
+      weight: 500,
+      family: FONT_FAMILY_ROBOTO,
+      letterSpacing: 0,
+    },
   },
   playRecord: {
     // Right edge 기준 (number area). Keep align:'right' for all values.
-    loginDays: { x: 1106, y: DEVICE.isIos ? 280 : 286, size: 56, weight: 600, family: FONT_FAMILY_ROBOTO, color: '#e34557', align: 'right', letterSpacing: 0 },
-    storyMain: { x: 1065, y: DEVICE.isIos ? 405 : 407, size: 28, weight: 500, family: FONT_FAMILY_ROBOTO, color: '#e34557', align: 'right', letterSpacing: 0 },
-    storyBand: { x: 1065, y: DEVICE.isIos ? 448 : 450, size: 28, weight: 500, family: FONT_FAMILY_ROBOTO, color: '#e34557', align: 'right', letterSpacing: 0 },
-    storyEvent: { x: 1065, y: DEVICE.isIos ? 491 : 493, size: 28, weight: 500, family: FONT_FAMILY_ROBOTO, color: '#e34557', align: 'right', letterSpacing: 0 },
-    lounge: { x: 1136, y: DEVICE.isIos ? 573 : 576, size: 56, weight: 600, family: FONT_FAMILY_ROBOTO, color: '#e34557', align: 'right', letterSpacing: -2 },
+    loginDays: {
+      x: 1106,
+      y: DEVICE.isIos ? 280 : 286,
+      size: 56,
+      weight: 600,
+      family: FONT_FAMILY_ROBOTO,
+      color: '#e34557',
+      align: 'right',
+      letterSpacing: 0,
+    },
+    storyMain: {
+      x: 1065,
+      y: DEVICE.isIos ? 405 : 407,
+      size: 28,
+      weight: 500,
+      family: FONT_FAMILY_ROBOTO,
+      color: '#e34557',
+      align: 'right',
+      letterSpacing: 0,
+    },
+    storyBand: {
+      x: 1065,
+      y: DEVICE.isIos ? 448 : 450,
+      size: 28,
+      weight: 500,
+      family: FONT_FAMILY_ROBOTO,
+      color: '#e34557',
+      align: 'right',
+      letterSpacing: 0,
+    },
+    storyEvent: {
+      x: 1065,
+      y: DEVICE.isIos ? 491 : 493,
+      size: 28,
+      weight: 500,
+      family: FONT_FAMILY_ROBOTO,
+      color: '#e34557',
+      align: 'right',
+      letterSpacing: 0,
+    },
+    lounge: {
+      x: 1136,
+      y: DEVICE.isIos ? 573 : 576,
+      size: 56,
+      weight: 600,
+      family: FONT_FAMILY_ROBOTO,
+      color: '#e34557',
+      align: 'right',
+      letterSpacing: -2,
+    },
   },
   member: {
-    cardCount: { x: 42, y: DEVICE.isIos ? 782 : 787, size: 56, weight: 600, family: FONT_FAMILY_ROBOTO, color: '#e34557', letterSpacing: -4 },
-    mostCollectedName: { x: 42, y: 912, size: 56, weight: 800, family: FONT_FAMILY_ZEN_KAKU, color: '#e34557', letterSpacing: 0 },
-    firstMemberName: { x: 42, y: 1046, size: 56, weight: 800, family: FONT_FAMILY_ZEN_KAKU, color: '#e34557', letterSpacing: 0 },
-    firstMemberStar: { x: 44, y: 1094, size: 24, weight: 600, family: FONT_FAMILY_ZEN_KAKU, letterSpacing: 0 },
-    firstMemberTitle: { x: 42, y: 1132, size: 28, weight: 600, family: FONT_FAMILY_ZEN_KAKU, letterSpacing: 0 },
+    cardCount: {
+      x: 42,
+      y: DEVICE.isIos ? 782 : 787,
+      size: 56,
+      weight: 600,
+      family: FONT_FAMILY_ROBOTO,
+      color: '#e34557',
+      letterSpacing: -4,
+    },
+    mostCollectedName: {
+      x: 42,
+      y: 912,
+      size: 56,
+      weight: 800,
+      family: FONT_FAMILY_ZEN_KAKU,
+      color: '#e34557',
+      letterSpacing: 0,
+    },
+    firstMemberName: {
+      x: 42,
+      y: 1046,
+      size: 56,
+      weight: 800,
+      family: FONT_FAMILY_ZEN_KAKU,
+      color: '#e34557',
+      letterSpacing: 0,
+    },
+    firstMemberStar: {
+      x: 44,
+      y: 1094,
+      size: 24,
+      weight: 600,
+      family: FONT_FAMILY_ZEN_KAKU,
+      letterSpacing: 0,
+    },
+    firstMemberTitle: {
+      x: 42,
+      y: 1132,
+      size: 28,
+      weight: 600,
+      family: FONT_FAMILY_ZEN_KAKU,
+      letterSpacing: 0,
+    },
   },
 };
 
@@ -136,15 +239,21 @@ const MEMBER_CATCH_STYLE = {
 };
 
 const SONG_STYLE = {
-  x: 269,
-  startY: DEVICE.isIos ? 1302 : 1304,
-  stepY: 45,
-  maxWidth: 440,
+  x: 296,
+  startY: DEVICE.isIos ? 1290 : 1292,
+  stepY: 53,
+  maxWidth: 476,
   size: 28,
+  wrappedSize: 25,
+  wrappedLineStep: 24,
   weight: 500,
   family: FONT_FAMILY_ZEN_KAKU,
   color: '#222',
-  letterSpacing: -1,
+  letterSpacing: -0.5,
+};
+const SONG_PREVIEW_RECORD_OVERRIDES = {
+  1: '２行表示確認用のとても長い楽曲タイトルサンプルです',
+  2: 'Drown Out the Noise and Push Through the Trash',
 };
 
 const TEXT_STYLE = {
@@ -199,15 +308,14 @@ const cloneData = (source) => {
 };
 
 const deepFreeze = (target) => {
-  if (!target || typeof target !== 'object' || Object.isFrozen(target)) return target;
+  if (!target || typeof target !== 'object' || Object.isFrozen(target))
+    return target;
   Object.freeze(target);
   Object.keys(target).forEach((key) => {
     deepFreeze(target[key]);
   });
   return target;
 };
-
-console.log("test1");
 
 let garupaDataSnapshot = null;
 
@@ -236,10 +344,22 @@ const loadCanvasFonts = async () => {
       document.fonts.load(`500 48px ${FONT_FACE_ROBOTO}`, '0123456789/().'),
       document.fonts.load(`700 64px ${FONT_FACE_ROBOTO}`, '0123456789/().'),
       document.fonts.load(`900 64px ${FONT_FACE_ROBOTO}`, '0123456789/().'),
-      document.fonts.load(`400 44px ${FONT_FACE_ZEN_KAKU}`, 'ID NAME SINCE 山田太郎 20170316'),
-      document.fonts.load(`500 44px ${FONT_FACE_ZEN_KAKU}`, 'ID NAME SINCE 山田太郎 20170316'),
-      document.fonts.load(`700 52px ${FONT_FACE_ZEN_KAKU}`, 'ID NAME SINCE 山田太郎 20170316'),
-      document.fonts.load(`900 52px ${FONT_FACE_ZEN_KAKU}`, 'ID NAME SINCE 山田太郎 20170316'),
+      document.fonts.load(
+        `400 44px ${FONT_FACE_ZEN_KAKU}`,
+        'ID NAME SINCE 山田太郎 20170316'
+      ),
+      document.fonts.load(
+        `500 44px ${FONT_FACE_ZEN_KAKU}`,
+        'ID NAME SINCE 山田太郎 20170316'
+      ),
+      document.fonts.load(
+        `700 52px ${FONT_FACE_ZEN_KAKU}`,
+        'ID NAME SINCE 山田太郎 20170316'
+      ),
+      document.fonts.load(
+        `900 52px ${FONT_FACE_ZEN_KAKU}`,
+        'ID NAME SINCE 山田太郎 20170316'
+      ),
     ]);
     await document.fonts.ready;
     // Ensure browser applies loaded webfonts before canvas drawing.
@@ -262,16 +382,29 @@ const normalizeLetterSpacing = (value) => {
 
 const isSpacingSensitiveSymbol = (char) => /[.%]/.test(char);
 
-const getSpacingBetweenChars = (currentChar, nextChar, letterSpacing, symbolLetterSpacing = null) => {
+const getSpacingBetweenChars = (
+  currentChar,
+  nextChar,
+  letterSpacing,
+  symbolLetterSpacing = null
+) => {
   const baseSpacing = normalizeLetterSpacing(letterSpacing);
   if (symbolLetterSpacing === null) return baseSpacing;
-  if (isSpacingSensitiveSymbol(currentChar) || isSpacingSensitiveSymbol(nextChar)) {
+  if (
+    isSpacingSensitiveSymbol(currentChar) ||
+    isSpacingSensitiveSymbol(nextChar)
+  ) {
     return normalizeLetterSpacing(symbolLetterSpacing);
   }
   return baseSpacing;
 };
 
-const measureTextWidth = (ctx, text, letterSpacing = 0, symbolLetterSpacing = null) => {
+const measureTextWidth = (
+  ctx,
+  text,
+  letterSpacing = 0,
+  symbolLetterSpacing = null
+) => {
   const value = String(text ?? '');
   if (!value) return 0;
 
@@ -283,13 +416,26 @@ const measureTextWidth = (ctx, text, letterSpacing = 0, symbolLetterSpacing = nu
   chars.forEach((char, index) => {
     width += ctx.measureText(char).width;
     if (index < chars.length - 1) {
-      width += getSpacingBetweenChars(char, chars[index + 1], spacing, symbolLetterSpacing);
+      width += getSpacingBetweenChars(
+        char,
+        chars[index + 1],
+        spacing,
+        symbolLetterSpacing
+      );
     }
   });
   return width;
 };
 
-const drawTextSpaced = (ctx, text, x, y, align = 'left', letterSpacing = 0, symbolLetterSpacing = null) => {
+const drawTextSpaced = (
+  ctx,
+  text,
+  x,
+  y,
+  align = 'left',
+  letterSpacing = 0,
+  symbolLetterSpacing = null
+) => {
   const value = String(text ?? '');
   const spacing = normalizeLetterSpacing(letterSpacing);
   if (!value) return;
@@ -308,7 +454,12 @@ const drawTextSpaced = (ctx, text, x, y, align = 'left', letterSpacing = 0, symb
     ctx.fillText(char, currentX, y);
     currentX += ctx.measureText(char).width;
     if (index < chars.length - 1) {
-      currentX += getSpacingBetweenChars(char, chars[index + 1], spacing, symbolLetterSpacing);
+      currentX += getSpacingBetweenChars(
+        char,
+        chars[index + 1],
+        spacing,
+        symbolLetterSpacing
+      );
     }
   });
 };
@@ -363,9 +514,16 @@ const drawTextWithEllipsis = (ctx, text, x, y, maxWidth, options = {}) => {
   ctx.fillStyle = color;
   ctx.textAlign = align;
   ctx.textBaseline = 'middle';
-  const ellipsisWidth = measureTextWidth(ctx, ellipsis, letterSpacing, symbolLetterSpacing);
+  const ellipsisWidth = measureTextWidth(
+    ctx,
+    ellipsis,
+    letterSpacing,
+    symbolLetterSpacing
+  );
 
-  if (measureTextWidth(ctx, value, letterSpacing, symbolLetterSpacing) <= maxWidth) {
+  if (
+    measureTextWidth(ctx, value, letterSpacing, symbolLetterSpacing) <= maxWidth
+  ) {
     drawTextSpaced(ctx, value, x, y, align, letterSpacing, symbolLetterSpacing);
     return;
   }
@@ -373,11 +531,21 @@ const drawTextWithEllipsis = (ctx, text, x, y, maxWidth, options = {}) => {
   let clipped = value;
   while (
     clipped.length > 0 &&
-    measureTextWidth(ctx, clipped, letterSpacing, symbolLetterSpacing) + ellipsisWidth > maxWidth
+    measureTextWidth(ctx, clipped, letterSpacing, symbolLetterSpacing) +
+      ellipsisWidth >
+      maxWidth
   ) {
     clipped = clipped.slice(0, -1);
   }
-  drawTextSpaced(ctx, `${clipped}${ellipsis}`, x, y, align, letterSpacing, symbolLetterSpacing);
+  drawTextSpaced(
+    ctx,
+    `${clipped}${ellipsis}`,
+    x,
+    y,
+    align,
+    letterSpacing,
+    symbolLetterSpacing
+  );
 };
 
 const wrapText = (ctx, text, maxWidth, maxLines, letterSpacing = 0) => {
@@ -387,7 +555,10 @@ const wrapText = (ctx, text, maxWidth, maxLines, letterSpacing = 0) => {
 
   for (let i = 0; i < chars.length; i += 1) {
     const next = line + chars[i];
-    if (measureTextWidth(ctx, next, letterSpacing) > maxWidth && line.length > 0) {
+    if (
+      measureTextWidth(ctx, next, letterSpacing) > maxWidth &&
+      line.length > 0
+    ) {
       lines.push(line);
       line = chars[i];
       if (lines.length >= maxLines) break;
@@ -402,15 +573,68 @@ const wrapText = (ctx, text, maxWidth, maxLines, letterSpacing = 0) => {
 };
 
 const drawSongs = (ctx, songs) => {
-  setFont(ctx, SONG_STYLE.weight, SONG_STYLE.size, SONG_STYLE.family);
-  ctx.fillStyle = SONG_STYLE.color;
-  ctx.textAlign = 'left';
-  ctx.textBaseline = 'middle';
+  const trimWrappedLineStart = (text) => String(text ?? '').replace(/^[\s\u3000]+/, '');
+  const getVisualLeftInset = (text, weight, size, family) => {
+    setFont(ctx, weight, size, family);
+    const metrics = ctx.measureText(String(text ?? ''));
+    return Number.isFinite(metrics.actualBoundingBoxLeft)
+      ? Math.max(0, metrics.actualBoundingBoxLeft)
+      : 0;
+  };
 
   [1, 2, 3, 4, 5].forEach((level, index) => {
     const songName = songs[level] || '';
     const y = SONG_STYLE.startY + index * SONG_STYLE.stepY;
-    drawTextWithEllipsis(ctx, songName, SONG_STYLE.x, y, SONG_STYLE.maxWidth, SONG_STYLE);
+    const baseOptions = {
+      color: SONG_STYLE.color,
+      weight: SONG_STYLE.weight,
+      family: SONG_STYLE.family,
+      align: 'left',
+      letterSpacing: SONG_STYLE.letterSpacing,
+    };
+
+    setFont(ctx, SONG_STYLE.weight, SONG_STYLE.size, SONG_STYLE.family);
+    const linesAtDefaultSize = wrapText(
+      ctx,
+      songName,
+      SONG_STYLE.maxWidth,
+      2,
+      SONG_STYLE.letterSpacing
+    );
+
+    if (linesAtDefaultSize.length <= 1) {
+      drawText(ctx, songName, SONG_STYLE.x, y, {
+        ...baseOptions,
+        size: SONG_STYLE.size,
+      });
+      return;
+    }
+
+    // Keep wrap points decided at 28px to avoid collapsing back to 1 line at 25px.
+    const wrappedLines = linesAtDefaultSize
+      .slice(0, 2)
+      .map((line, lineIndex) =>
+        lineIndex === 0 ? line : trimWrappedLineStart(line)
+      );
+    const firstLineY = y - SONG_STYLE.wrappedLineStep / 2;
+    wrappedLines.forEach((line, lineIndex) => {
+      const visualInset = getVisualLeftInset(
+        line,
+        SONG_STYLE.weight,
+        SONG_STYLE.wrappedSize,
+        SONG_STYLE.family
+      );
+      drawText(
+        ctx,
+        line,
+        SONG_STYLE.x - visualInset,
+        firstLineY + lineIndex * SONG_STYLE.wrappedLineStep,
+        {
+          ...baseOptions,
+          size: SONG_STYLE.wrappedSize,
+        }
+      );
+    });
   });
 };
 
@@ -430,7 +654,8 @@ const drawFraction = (ctx, numerator, denominator, x, y) => {
 };
 
 const drawGraph = (ctx, clearRateData = {}) => {
-  const { chartLeft, chartTop, chartBottom, barWidth, barGap, colors } = GRAPH_STYLE;
+  const { chartLeft, chartTop, chartBottom, barWidth, barGap, colors } =
+    GRAPH_STYLE;
   const levels = [1, 2, 3, 4, 5];
 
   levels.forEach((level, index) => {
@@ -449,7 +674,13 @@ const drawGraph = (ctx, clearRateData = {}) => {
 
     drawFraction(ctx, cleared, total, x + barWidth / 2, y);
     // Place the rate label at the vertical center of rendered bar.
-    drawText(ctx, `${rate.toFixed(1)}%`, x + barWidth / 2, y + barHeight / 2, GRAPH_STYLE.rate);
+    drawText(
+      ctx,
+      `${rate.toFixed(1)}%`,
+      x + barWidth / 2,
+      y + barHeight / 2,
+      GRAPH_STYLE.rate
+    );
   });
 };
 
@@ -457,8 +688,6 @@ const drawGeneratedImage = async () => {
   const data = captureGarupaDataSnapshot();
   if (!data) return;
   await loadCanvasFonts();
-
-  console.log("test2");
 
   const canvas = document.createElement('canvas');
   canvas.width = CANVAS_WIDTH * RENDER_SCALE;
@@ -478,24 +707,72 @@ const drawGeneratedImage = async () => {
   const firstDraw = data[2] || {};
   const topEvent = data[8] || {};
 
-  drawRotatedText(ctx, user[1] || '', TEXT_LAYOUT.playerPass.id.x, TEXT_LAYOUT.playerPass.id.y, {
-    ...TEXT_LAYOUT.playerPass.id,
-    rotation: PLAYER_PASS_ANGLE,
-  });
-  drawRotatedText(ctx, user[2] || '', TEXT_LAYOUT.playerPass.name.x, TEXT_LAYOUT.playerPass.name.y, {
-    ...TEXT_LAYOUT.playerPass.name,
-    rotation: PLAYER_PASS_ANGLE,
-  });
-  drawRotatedText(ctx, formatDate(user[3]), TEXT_LAYOUT.playerPass.since.x, TEXT_LAYOUT.playerPass.since.y, {
-    ...TEXT_LAYOUT.playerPass.since,
-    rotation: PLAYER_PASS_ANGLE,
-  });
+  drawRotatedText(
+    ctx,
+    user[1] || '',
+    TEXT_LAYOUT.playerPass.id.x,
+    TEXT_LAYOUT.playerPass.id.y,
+    {
+      ...TEXT_LAYOUT.playerPass.id,
+      rotation: PLAYER_PASS_ANGLE,
+    }
+  );
+  drawRotatedText(
+    ctx,
+    user[2] || '',
+    TEXT_LAYOUT.playerPass.name.x,
+    TEXT_LAYOUT.playerPass.name.y,
+    {
+      ...TEXT_LAYOUT.playerPass.name,
+      rotation: PLAYER_PASS_ANGLE,
+    }
+  );
+  drawRotatedText(
+    ctx,
+    formatDate(user[3]),
+    TEXT_LAYOUT.playerPass.since.x,
+    TEXT_LAYOUT.playerPass.since.y,
+    {
+      ...TEXT_LAYOUT.playerPass.since,
+      rotation: PLAYER_PASS_ANGLE,
+    }
+  );
 
-  drawText(ctx, safeNumber(data[1]), TEXT_LAYOUT.playRecord.loginDays.x, TEXT_LAYOUT.playRecord.loginDays.y, TEXT_LAYOUT.playRecord.loginDays);
-  drawText(ctx, safeNumber(data[9]?.[1]), TEXT_LAYOUT.playRecord.storyMain.x, TEXT_LAYOUT.playRecord.storyMain.y, TEXT_LAYOUT.playRecord.storyMain);
-  drawText(ctx, safeNumber(data[9]?.[2]), TEXT_LAYOUT.playRecord.storyBand.x, TEXT_LAYOUT.playRecord.storyBand.y, TEXT_LAYOUT.playRecord.storyBand);
-  drawText(ctx, safeNumber(data[9]?.[3]), TEXT_LAYOUT.playRecord.storyEvent.x, TEXT_LAYOUT.playRecord.storyEvent.y, TEXT_LAYOUT.playRecord.storyEvent);
-  drawText(ctx, safeNumber(data[10]), TEXT_LAYOUT.playRecord.lounge.x, TEXT_LAYOUT.playRecord.lounge.y, TEXT_LAYOUT.playRecord.lounge);
+  drawText(
+    ctx,
+    safeNumber(data[1]),
+    TEXT_LAYOUT.playRecord.loginDays.x,
+    TEXT_LAYOUT.playRecord.loginDays.y,
+    TEXT_LAYOUT.playRecord.loginDays
+  );
+  drawText(
+    ctx,
+    safeNumber(data[9]?.[1]),
+    TEXT_LAYOUT.playRecord.storyMain.x,
+    TEXT_LAYOUT.playRecord.storyMain.y,
+    TEXT_LAYOUT.playRecord.storyMain
+  );
+  drawText(
+    ctx,
+    safeNumber(data[9]?.[2]),
+    TEXT_LAYOUT.playRecord.storyBand.x,
+    TEXT_LAYOUT.playRecord.storyBand.y,
+    TEXT_LAYOUT.playRecord.storyBand
+  );
+  drawText(
+    ctx,
+    safeNumber(data[9]?.[3]),
+    TEXT_LAYOUT.playRecord.storyEvent.x,
+    TEXT_LAYOUT.playRecord.storyEvent.y,
+    TEXT_LAYOUT.playRecord.storyEvent
+  );
+  drawText(
+    ctx,
+    safeNumber(data[10]),
+    TEXT_LAYOUT.playRecord.lounge.x,
+    TEXT_LAYOUT.playRecord.lounge.y,
+    TEXT_LAYOUT.playRecord.lounge
+  );
 
   drawText(
     ctx,
@@ -507,7 +784,13 @@ const drawGeneratedImage = async () => {
 
   const mostCollectedCharacterId = safeNumber(data[5]);
   const mostCollectedName = getCharacterName(mostCollectedCharacterId);
-  drawText(ctx, mostCollectedName, TEXT_LAYOUT.member.mostCollectedName.x, TEXT_LAYOUT.member.mostCollectedName.y, TEXT_LAYOUT.member.mostCollectedName);
+  drawText(
+    ctx,
+    mostCollectedName,
+    TEXT_LAYOUT.member.mostCollectedName.x,
+    TEXT_LAYOUT.member.mostCollectedName.y,
+    TEXT_LAYOUT.member.mostCollectedName
+  );
   drawText(
     ctx,
     getCharacterName(safeNumber(firstDraw[2])),
@@ -522,10 +805,21 @@ const drawGeneratedImage = async () => {
     TEXT_LAYOUT.member.firstMemberStar.y,
     TEXT_LAYOUT.member.firstMemberStar
   );
-  drawText(ctx, firstDraw[3] || '', TEXT_LAYOUT.member.firstMemberTitle.x, TEXT_LAYOUT.member.firstMemberTitle.y, TEXT_LAYOUT.member.firstMemberTitle);
+  drawText(
+    ctx,
+    firstDraw[3] || '',
+    TEXT_LAYOUT.member.firstMemberTitle.x,
+    TEXT_LAYOUT.member.firstMemberTitle.y,
+    TEXT_LAYOUT.member.firstMemberTitle
+  );
 
   const firstTopEventName = topEvent[1] || '';
-  setFont(ctx, TEXT_STYLE.event.weight, TEXT_STYLE.event.size, TEXT_STYLE.event.family);
+  setFont(
+    ctx,
+    TEXT_STYLE.event.weight,
+    TEXT_STYLE.event.size,
+    TEXT_STYLE.event.family
+  );
   ctx.fillStyle = '#222';
   ctx.textAlign = 'left';
   ctx.textBaseline = 'middle';
@@ -546,7 +840,13 @@ const drawGeneratedImage = async () => {
       TEXT_STYLE.event
     );
   });
-  drawText(ctx, `(${safeNumber(topEvent[2])}位)`, TEXT_STYLE.eventRank.x, TEXT_STYLE.eventRank.y, TEXT_STYLE.eventRank);
+  drawText(
+    ctx,
+    `(${safeNumber(topEvent[2])}位)`,
+    TEXT_STYLE.eventRank.x,
+    TEXT_STYLE.eventRank.y,
+    TEXT_STYLE.eventRank
+  );
 
   drawTextWithEllipsis(
     ctx,
@@ -557,13 +857,19 @@ const drawGeneratedImage = async () => {
     TEXT_STYLE.syncedSong
   );
 
-  drawSongs(ctx, data[3] || {});
+  const songsForPreview = {
+    ...(data[3] || {}),
+    ...SONG_PREVIEW_RECORD_OVERRIDES,
+  };
+  drawSongs(ctx, songsForPreview);
   drawGraph(ctx, data[6] || {});
 
   if (mostCollectedCharacterId > 0) {
     try {
       const [charaImage, catchImage] = await Promise.all([
-        loadImage(`${CHARACTER_IMAGE_BASE}/${mostCollectedCharacterId}/member_thumb.png`),
+        loadImage(
+          `${CHARACTER_IMAGE_BASE}/${mostCollectedCharacterId}/member_thumb.png`
+        ),
         loadImage(CATCH_IMAGE_PATH),
       ]);
       ctx.drawImage(charaImage, 364, 582, 235, 575);
@@ -588,7 +894,6 @@ const drawGeneratedImage = async () => {
     flyerImageWrap.classList.add('js--show');
   }
   if (!flyerImage) {
-    console.warn('.top-flyer__img img が見つかりませんでした');
     return;
   }
   flyerImage.src = generatedImageSrc;
@@ -596,9 +901,7 @@ const drawGeneratedImage = async () => {
 
 window.addEventListener('load', () => {
   if (!captureGarupaDataSnapshot()) return;
-  drawGeneratedImage().catch((error) => {
-    console.error('画像生成に失敗しました', error);
-  });
+  drawGeneratedImage().catch((error) => {});
 });
 
 // Capture a local immutable snapshot as early as possible.
