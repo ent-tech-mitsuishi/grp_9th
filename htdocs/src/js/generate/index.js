@@ -59,7 +59,7 @@ const EXPORT_MIME_TYPE = HIGH_QUALITY_MODE ? 'image/png' : 'image/jpeg';
 
 const GRAPH_STYLE = {
   chartLeft: 704,
-  chartTop: 830,
+  chartTop: 835,
   chartRight: 1105,
   chartBottom: 1125,
   barWidth: 50,
@@ -252,14 +252,14 @@ const SONG_STYLE = {
   letterSpacing: -0.5,
 };
 const SONG_PREVIEW_RECORD_OVERRIDES = {
-  1: '２行表示確認用のとても長い楽曲タイトルサンプルです',
+  1: '表示確認用のとても長い楽曲タイトルサンプルです',
   2: 'Drown Out the Noise and Push Through the Trash',
 };
 
 const TEXT_STYLE = {
   event: {
     x: 748,
-    y: DEVICE.isIos ? 1296 : 1300,
+    y: DEVICE.isIos ? 1286 : 1290,
     lineStep: 39,
     maxWidth: 420,
     size: 28,
@@ -269,7 +269,7 @@ const TEXT_STYLE = {
   },
   eventRank: {
     x: 748,
-    y: DEVICE.isIos ? 1376 : 1382,
+    y: DEVICE.isIos ? 1368 : 1372,
     size: 28,
     weight: 500,
     family: FONT_FAMILY_ZEN_KAKU,
@@ -573,7 +573,8 @@ const wrapText = (ctx, text, maxWidth, maxLines, letterSpacing = 0) => {
 };
 
 const drawSongs = (ctx, songs) => {
-  const trimWrappedLineStart = (text) => String(text ?? '').replace(/^[\s\u3000]+/, '');
+  const trimWrappedLineStart = (text) =>
+    String(text ?? '').replace(/^[\s\u3000]+/, '');
   const getVisualLeftInset = (text, weight, size, family) => {
     setFont(ctx, weight, size, family);
     const metrics = ctx.measureText(String(text ?? ''));
@@ -663,7 +664,11 @@ const drawGraph = (ctx, clearRateData = {}) => {
     const cleared = safeNumber(raw[1]);
     const total = safeNumber(raw[2]);
     const rate = total > 0 ? (cleared / total) * 100 : 0;
-    const renderedRate = Math.max(rate, GRAPH_STYLE.minBarRate);
+    const clampedRate = Math.max(0, Math.min(rate, 100));
+    const renderedRate =
+      clampedRate > 0
+        ? Math.max(clampedRate, GRAPH_STYLE.minBarRate)
+        : 0;
 
     const barHeight = ((chartBottom - chartTop) * renderedRate) / 100;
     const x = chartLeft + 27 + index * (barWidth + barGap);
@@ -840,11 +845,14 @@ const drawGeneratedImage = async () => {
       TEXT_STYLE.event
     );
   });
+  const eventLineCount = Math.max(1, Math.min(eventLines.length, 2));
+  const eventRankY =
+    TEXT_STYLE.eventRank.y - (2 - eventLineCount) * TEXT_STYLE.event.lineStep;
   drawText(
     ctx,
     `(${safeNumber(topEvent[2])}位)`,
     TEXT_STYLE.eventRank.x,
-    TEXT_STYLE.eventRank.y,
+    eventRankY,
     TEXT_STYLE.eventRank
   );
 
