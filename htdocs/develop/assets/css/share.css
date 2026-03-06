@@ -784,6 +784,14 @@ picture {
   }
 }
 
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  body > * {
+    display: none;
+  }
+  .common__lock {
+    display: flex;
+  }
+}
 .common__main {
   position: relative;
   z-index: 1;
@@ -939,6 +947,26 @@ picture {
 @media only screen and (min-width: 751px) {
   .common__inner {
     padding: 0 18px;
+  }
+}
+.common__lock {
+  display: none;
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .common__lock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e34557;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+  .common__lock-inner {
+    width: 66.6666666667vh;
   }
 }
 
