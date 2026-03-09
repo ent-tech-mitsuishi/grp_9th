@@ -60,6 +60,7 @@
   &__txt {
     margin: get_vw(20) auto 0;
     width: get_vw(427);
+    display: none;
 
     @include min-screen() {
       margin-top: get_px(20);
