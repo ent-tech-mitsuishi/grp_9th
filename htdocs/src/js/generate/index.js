@@ -252,10 +252,6 @@ const SONG_STYLE = {
   color: '#222',
   letterSpacing: -0.5,
 };
-const SONG_PREVIEW_RECORD_OVERRIDES = {
-  1: '表示確認用のとても長い楽曲タイトルサンプルです',
-  2: 'Drown Out the Noise and Push Through the Trash',
-};
 
 const TEXT_STYLE = {
   event: {
@@ -866,11 +862,7 @@ const drawGeneratedImage = async () => {
     TEXT_STYLE.syncedSong
   );
 
-  const songsForPreview = {
-    ...(data[3] || {}),
-    ...SONG_PREVIEW_RECORD_OVERRIDES,
-  };
-  drawSongs(ctx, songsForPreview);
+  drawSongs(ctx, data[3] || {});
   drawGraph(ctx, data[6] || {});
 
   if (mostCollectedCharacterId > 0) {
