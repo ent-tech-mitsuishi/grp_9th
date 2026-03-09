@@ -95,6 +95,7 @@ const GRAPH_STYLE = {
 const BASE_IMAGE_PATH = './assets/img/generate/base/base.jpg';
 const CATCH_IMAGE_PATH = './assets/img/generate/base/catch.png';
 const CHARACTER_IMAGE_BASE = './assets/img/generate/chara';
+const DOWNLOAD_FILE_PREFIX = 'garupa9th_flyer';
 const FONT_FACE_ROBOTO = '"Roboto"';
 const FONT_FACE_ZEN_KAKU = '"Zen Kaku Gothic Antique"';
 const FONT_FAMILY_DEFAULT = '"Noto Sans", "Noto Sans JP", sans-serif';
@@ -901,14 +902,51 @@ const drawGeneratedImage = async () => {
   if (flyerImageWrap) {
     flyerImageWrap.classList.add('js--show');
   }
-  if (!flyerImage) {
-    return;
+  if (flyerImage) {
+    flyerImage.src = generatedImageSrc;
   }
-  flyerImage.src = generatedImageSrc;
+  return generatedImageSrc;
+};
+
+const getDownloadFileExtension = () =>
+  EXPORT_MIME_TYPE === 'image/png' ? 'png' : 'jpg';
+
+const buildDownloadFileName = () => {
+  const now = new Date();
+  const pad = (value) => String(value).padStart(2, '0');
+  const timestamp = `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(
+    now.getDate()
+  )}_${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
+  return `${DOWNLOAD_FILE_PREFIX}_${timestamp}.${getDownloadFileExtension()}`;
+};
+
+const triggerImageDownload = (imageSrc) => {
+  if (!imageSrc) return;
+  const downloadLink = document.createElement('a');
+  downloadLink.href = imageSrc;
+  downloadLink.download = buildDownloadFileName();
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  document.body.removeChild(downloadLink);
+};
+
+const handleFlyerDownloadClick = async (event) => {
+  event.preventDefault();
+  if (!captureGarupaDataSnapshot()) return;
+  const generatedImageSrc = await drawGeneratedImage();
+  triggerImageDownload(generatedImageSrc);
 };
 
 window.addEventListener('load', () => {
   if (!captureGarupaDataSnapshot()) return;
+  const downloadButton = document.querySelector('.top-flyer__btn');
+  if (downloadButton) {
+    downloadButton.addEventListener('click', (event) => {
+      handleFlyerDownloadClick(event).catch((error) => {
+        console.warn('画像ダウンロード処理に失敗しました', error);
+      });
+    });
+  }
   drawGeneratedImage().catch((error) => {});
 });
 
