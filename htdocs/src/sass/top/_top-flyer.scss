@@ -66,4 +66,71 @@
       width: get_px(427);
     }
   }
+
+  &__btn {
+    background-color: $c_red;
+    border-radius: get_vw(43);
+    color: $c_white;
+    font-family: $font_zenkaku;
+    font-size: get_vw(32);
+    font-weight: $w_black;
+    margin: get_vw(35) auto 0;
+    width: get_vw(392);
+    height: get_vw(88);
+    @include center;
+    gap: get_vw(7);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    @include min-screen() {
+      border-radius: get_px(43);
+      font-size: get_px(32);
+      margin-top: get_px(35);
+      width: get_px(392);
+      height: get_px(88);
+      gap: get_px(7);
+      @include hover;
+    }
+
+    span {
+      display: block;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      text-align: center;
+    }
+
+    @include before {
+      background-color: rgba(#ffa1ac, 0.4);
+      clip-path: polygon(0 0, 100% 0%, 55% 100%, 0% 100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: get_vw(262);
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+
+      @include min-screen() {
+        width: get_px(262);
+      }
+    }
+
+    @include after {
+      border: get_vw(2) solid #ffa9b3;
+      border-radius: get_vw(43);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+
+      @include min-screen() {
+        border-radius: get_px(43);
+        border-width: get_px(2);
+      }
+    }
+  }
 }
