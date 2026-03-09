@@ -6,9 +6,9 @@ if (!isset($_GET['json_param']) || $_GET['json_param'] === '') {
 }
 
 // json_param を復号・展開して PHP 配列として取得
-$rawJson      = null;
-$parsedData   = null;
-$decodeError  = null;
+$rawJson = null;
+$parsedData = null;
+$decodeError = null;
 
 function base64url_decode(string $data)
 {
@@ -28,12 +28,18 @@ function decode_json_param(string $param)
   }
 
   $key = 'gbp_9th_Z2JwXzl0';
-  $iv  = 'gbp_9th_oAa0lzXw';
+  $iv = 'gbp_9th_oAa0lzXw';
 
-  while (openssl_error_string() !== false) {}
+  while (openssl_error_string() !== false) {
+  }
 
-  $plain = openssl_decrypt($cipher, 'AES-128-CBC', $key, OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING, $iv);
-
+  $plain = openssl_decrypt(
+    $cipher,
+    'AES-128-CBC',
+    $key,
+    OPENSSL_RAW_DATA | OPENSSL_ZERO_PADDING,
+    $iv
+  );
   if ($plain === false) {
     throw new Exception('AES 復号に失敗しました。');
   }
@@ -52,19 +58,31 @@ function decode_json_param(string $param)
 
 function formatDate(string $dateStr): string
 {
-  if (strlen($dateStr) !== 8) return $dateStr;
+  if (strlen($dateStr) !== 8) {
+    return $dateStr;
+  }
   return substr($dateStr, 0, 4) . '年' . substr($dateStr, 4, 2) . '月' . substr($dateStr, 6, 2) . '日';
 }
 
 function getDifficultyName(int $level): string
 {
-  $names = [1 => 'EASY', 2 => 'NORMAL', 3 => 'HARD', 4 => 'EXPERT', 5 => 'SPECIAL'];
+  $names = [
+    1 => 'EASY',
+    2 => 'NORMAL',
+    3 => 'HARD',
+    4 => 'EXPERT',
+    5 => 'SPECIAL',
+  ];
   return $names[$level] ?? "Lv.{$level}";
 }
 
 function getStoryTypeName(int $type): string
 {
-  $names = [1 => 'メインストーリー', 2 => 'バンドストーリー', 3 => 'イベントストーリー'];
+  $names = [
+    1 => 'メインストーリー',
+    2 => 'バンドストーリー',
+    3 => 'イベントストーリー',
+  ];
   return $names[$type] ?? "種別{$type}";
 }
 
@@ -186,6 +204,11 @@ $user = $d['0'] ?? [];
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKM95WS" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+  <div class="common__lock">
+    <div class="common__lock-inner">
+      <img src="./assets/img/common/popup.png" alt="スマートフォンを縦向きにして閲覧してください">
+    </div>
+  </div>
   <main class="common__main">
     <div class="common__bg sp-none"></div>
     <div class="common__loading">
@@ -286,7 +309,7 @@ $user = $d['0'] ?? [];
                     <h3>集めたメンバー</h3>
                     <div class="top-player__data-dtl">
                       <p class="top-player__data-txt">
-                        <span class="number"></span> 枚
+                        <span class="number"></span>
                       </p>
                     </div>
                   </div>
@@ -419,10 +442,7 @@ $user = $d['0'] ?? [];
             <div class="common__inner">
               <h2 class="top-flyer__h2"> あなたの<span>社内報</span>はこちら！ </h2>
               <div class="top-flyer__img">
-                <img
-                    src=""
-                    alt="あなたの社内報はこちら！"
-                  >
+                <img src="" alt="あなたの社内報はこちら！">
               </div>
               <p class="top-flyer__txt">
                 <img
@@ -430,6 +450,9 @@ $user = $d['0'] ?? [];
                     alt="画像を長押しして保存してね！"
                   >
               </p>
+              <button class="top-flyer__btn">
+                <span>画像をダウンロード</span>
+              </button>
             </div>
           </section>
           <div class="top__share">
@@ -519,70 +542,6 @@ $user = $d['0'] ?? [];
       </div>
     </article>
   </main>
-  <script>
-      var data = [
-        {
-          1: 1001,
-          2: '新人スタッフ',
-          3: '20160108',
-        },
-        3052,
-        {
-          1: 3,
-          2: 1,
-          3: '約束のキャンディ',
-        },
-        {
-          1: 'ときめきエクスペリエンス！',
-          2: 'キラキラだとか夢だとか ～Sing Girls～',
-          3: 'YAPPY！SCHOOL CARNIVAL☆彡',
-          4: "What's the POPIPA!?",
-          5: '誓いのWingbeat',
-        },
-        {
-          1: 512,
-          2: 780,
-        },
-        1,
-        {
-          1: {
-            1: 740,
-            2: 752,
-          },
-          2: {
-            1: 651,
-            2: 752,
-          },
-          3: {
-            1: 501,
-            2: 752,
-          },
-          4: {
-            1: 97,
-            2: 752,
-          },
-          5: {
-            1: 15,
-            2: 431,
-          },
-        },
-        {
-          1: 'ときめきエクスペリエンス！',
-          2: 52,
-        },
-        {
-          1: 'パスパレ探検隊～無人島を征くアイドル～',
-          2: 4192,
-        },
-        {
-          1: 40,
-          2: 5,
-          3: 442,
-        },
-        72,
-        'オトモダチフィルム',
-      ];
-    </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
   <script src="./assets/js/project.js"></script>
 </body>

@@ -1,6 +1,4 @@
 <?php
-ob_start(); // 出力バッファリング開始（警告出力によるheader()失敗を防止）
-
 // パラメータがない場合はエラーページにリダイレクト
 if (!isset($_GET['json_param']) || $_GET['json_param'] === '') {
   header('Location: ./error/');
@@ -49,7 +47,8 @@ function decode_json_param(string $param)
   if (!function_exists('bzdecompress')) {
     throw new Exception('bzip2(bz2) 拡張が有効ではありません。');
   }
-  $decompressed = @bzdecompress($plain); // @で警告を抑制
+
+  $decompressed = bzdecompress($plain);
   if (!is_string($decompressed)) {
     throw new Exception("bzip2 解凍に失敗しました。");
   }
@@ -141,7 +140,7 @@ try {
     throw new Exception('JSON デコードに失敗しました: ' . json_last_error_msg());
   }
 } catch (Throwable $e) {
-  header('Location: ./error/');
+  header('Location: ./error/?msg=' . urlencode($e->getMessage()));
   exit;
 }
 
@@ -310,7 +309,7 @@ $user = $d['0'] ?? [];
                     <h3>集めたメンバー</h3>
                     <div class="top-player__data-dtl">
                       <p class="top-player__data-txt">
-                        <span class="number"></span> 枚
+                        <span class="number"></span>
                       </p>
                     </div>
                   </div>
@@ -445,6 +444,12 @@ $user = $d['0'] ?? [];
               <div class="top-flyer__img">
                 <img src="" alt="あなたの社内報はこちら！">
               </div>
+              <p class="top-flyer__txt">
+                <img
+                    src="./assets/img/txt_save.png"
+                    alt="画像を長押しして保存してね！"
+                  >
+              </p>
               <button class="top-flyer__btn">
                 <span>画像をダウンロード</span>
               </button>
@@ -540,7 +545,7 @@ $user = $d['0'] ?? [];
   <script>
       var data = [
         {
-          1: 1001,
+          1: 1003,
           2: '新人スタッフ',
           3: '20160108',
         },
