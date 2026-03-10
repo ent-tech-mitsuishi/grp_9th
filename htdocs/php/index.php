@@ -150,13 +150,17 @@ $user = $d['0'] ?? [];
 ?>
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="utf-8">
   <!-- Google Tag Manager -->
   <script>
-    (function (w, d, s, l, i) {
+    (function(w, d, s, l, i) {
       w[l] = w[l] || [];
-      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
       var f = d.getElementsByTagName(s)[0],
         j = d.createElement(s),
         dl = l != 'dataLayer' ? '&l=' + l : '';
@@ -187,20 +191,19 @@ $user = $d['0'] ?? [];
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400..700&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700;900&display=swap"
-    rel="stylesheet"
-  >
+    rel="stylesheet">
   <!-- favicon -->
   <link rel="shortcut icon" href="./assets/img/favicon.ico">
   <link
     rel="apple-touch-icon"
-    href="assets/img/webclip.png"
-  >
+    href="assets/img/webclip.png">
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/share.css">
 </head>
 <script>
-    window.garupa9thData = <?php echo json_encode($parsedData, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
-  </script>
+  window.garupa9thData = <?php echo json_encode($parsedData, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT); ?>;
+</script>
+
 <body data-page="top">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKM95WS" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
@@ -225,17 +228,15 @@ $user = $d['0'] ?? [];
           <span class="common__line rotate"></span>
           <h1 class="common__h1">
             <img
-                src="./assets/img/common/img_mv.png"
-                alt="9周年 PROJECT LIVEHOUSE CIRCLE 社内報 NEWSLETTER"
-              >
+              src="./assets/img/common/img_mv.png"
+              alt="9周年 PROJECT LIVEHOUSE CIRCLE 社内報 NEWSLETTER">
           </h1>
           <span class="common__line"></span>
           <section class="top-player">
             <h2 class="top-player__ttl">
               <img
-                  src="./assets/img/ttl_history.png"
-                  alt="これまでの活動履歴をお届け！"
-                >
+                src="./assets/img/ttl_history.png"
+                alt="これまでの活動履歴をお届け！">
             </h2>
             <div class="common__inner">
               <div class="top-player__pass">
@@ -256,9 +257,8 @@ $user = $d['0'] ?? [];
               <div class="top-player__data-block">
                 <h2 class="top-player__data-h2">
                   <img
-                      src="./assets/img/ttl_data_1.png"
-                      alt="DATA 01 プレイ記録"
-                    >
+                    src="./assets/img/ttl_data_1.png"
+                    alt="DATA 01 プレイ記録">
                 </h2>
                 <div class="top-player__data-inner">
                   <div class="top-player__data-item">
@@ -301,16 +301,15 @@ $user = $d['0'] ?? [];
               <div class="top-player__data-block">
                 <h2 class="top-player__data-h2">
                   <img
-                      src="./assets/img/ttl_data_2.png"
-                      alt="DATA 02 キャラクター&メンバー"
-                    >
+                    src="./assets/img/ttl_data_2.png"
+                    alt="DATA 02 キャラクター&メンバー">
                 </h2>
                 <div class="top-player__data-inner">
                   <div class="top-player__data-item">
                     <h3>集めたメンバー</h3>
                     <div class="top-player__data-dtl">
                       <p class="top-player__data-txt">
-                        <span class="number"></span> 枚
+                        <span class="number"></span>
                       </p>
                     </div>
                   </div>
@@ -337,18 +336,16 @@ $user = $d['0'] ?? [];
                   </span>
                   <p>
                     <img
-                        src="./assets/img/member_copy.png"
-                        alt="あなたが一番集めているのはこのキャラクター！"
-                      >
+                      src="./assets/img/member_copy.png"
+                      alt="あなたが一番集めているのはこのキャラクター！">
                   </p>
                 </div>
               </div>
               <div class="top-player__data-block">
                 <h2 class="top-player__data-h2">
                   <img
-                      src="./assets/img/ttl_data_3.png"
-                      alt="DATA 03 楽曲クリア率"
-                    >
+                    src="./assets/img/ttl_data_3.png"
+                    alt="DATA 03 楽曲クリア率">
                 </h2>
                 <div class="common__inner">
                   <div class="top-player__graph">
@@ -391,9 +388,8 @@ $user = $d['0'] ?? [];
               <div class="top-player__data-block">
                 <h2 class="top-player__data-h2">
                   <img
-                      src="./assets/img/ttl_data_4.png"
-                      alt="DATA 04 その他"
-                    >
+                    src="./assets/img/ttl_data_4.png"
+                    alt="DATA 04 その他">
                 </h2>
                 <div class="top-player__data-inner">
                   <div class="top-player__data-item">
@@ -445,6 +441,11 @@ $user = $d['0'] ?? [];
               <div class="top-flyer__img">
                 <img src="" alt="あなたの社内報はこちら！">
               </div>
+              <p class="top-flyer__txt">
+                <img
+                  src="./assets/img/txt_save.png"
+                  alt="画像を長押しして保存してね！">
+              </p>
               <button class="top-flyer__btn">
                 <span>画像をダウンロード</span>
               </button>
@@ -453,9 +454,8 @@ $user = $d['0'] ?? [];
           <div class="top__share">
             <h2>
               <img
-                  src="./assets/img/ttl_share.png"
-                  alt="あなたの社内報をXでシェアしよう！"
-                >
+                src="./assets/img/ttl_share.png"
+                alt="あなたの社内報をXでシェアしよう！">
             </h2>
             <a href="" target="_blank" class="top__share-btn">
               <span>
@@ -474,15 +474,13 @@ $user = $d['0'] ?? [];
                   <ul class="footer__app-download">
                     <a href="https://app.adjust.com/xf8xmuy?redirect=https%3A%2F%2Fapps.apple.com%2Fjp%2Fapp%2Fid1195834442" target="_blank">
                       <img
-              src="./assets/img/common/btn_store_apple.png"
-              alt="App Storeからダウンロード"
-            >
+                        src="./assets/img/common/btn_store_apple.png"
+                        alt="App Storeからダウンロード">
                     </a>
                     <a href="https://app.adjust.com/i6ek911?redirect=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fhl%3Dja%26id%3Djp.co.craftegg.band" target="_blank">
                       <img
-              src="./assets/img/common/btn_store_google.png"
-              alt="Google Playで手に入れよう"
-            >
+                        src="./assets/img/common/btn_store_google.png"
+                        alt="Google Playで手に入れよう">
                     </a>
                   </ul>
                 </div>
@@ -512,21 +510,18 @@ $user = $d['0'] ?? [];
               <div class="footer__btm-logo">
                 <a href="https://bang-dream.bushimo.jp/">
                   <img
-          src="./assets/img/common/logo_garupa.png"
-          alt="BanG Dream!バンドリ！ ガールズバンドパーティ！"
-        >
+                    src="./assets/img/common/logo_garupa.png"
+                    alt="BanG Dream!バンドリ！ ガールズバンドパーティ！">
                 </a>
                 <a href="https://game.bushiroad.com/" target="_blank">
                   <img
-          src="./assets/img/common/logo_bushimo.png"
-          alt="ブシモ"
-        >
+                    src="./assets/img/common/logo_bushimo.png"
+                    alt="ブシモ">
                 </a>
                 <a href="https://bushiroad.com/" target="_blank">
                   <img
-          src="./assets/img/common/logo_bushiroad.png"
-          alt="BUSHIROAD"
-        >
+                    src="./assets/img/common/logo_bushiroad.png"
+                    alt="BUSHIROAD">
                 </a>
               </div>
               <p class="footer__btm-copy"> 掲載の記事・写真・イラスト等すべてのコンテンツの無断複写・転載を禁じます。 <span>&copy;BanG Dream! Project</span>
@@ -537,71 +532,9 @@ $user = $d['0'] ?? [];
       </div>
     </article>
   </main>
-  <script>
-      var data = [
-        {
-          1: 1001,
-          2: '新人スタッフ',
-          3: '20160108',
-        },
-        3052,
-        {
-          1: 3,
-          2: 1,
-          3: '約束のキャンディ',
-        },
-        {
-          1: 'ときめきエクスペリエンス！',
-          2: 'キラキラだとか夢だとか ～Sing Girls～',
-          3: 'YAPPY！SCHOOL CARNIVAL☆彡',
-          4: "What's the POPIPA!?",
-          5: '誓いのWingbeat',
-        },
-        {
-          1: 512,
-          2: 780,
-        },
-        1,
-        {
-          1: {
-            1: 740,
-            2: 752,
-          },
-          2: {
-            1: 651,
-            2: 752,
-          },
-          3: {
-            1: 501,
-            2: 752,
-          },
-          4: {
-            1: 97,
-            2: 752,
-          },
-          5: {
-            1: 15,
-            2: 431,
-          },
-        },
-        {
-          1: 'ときめきエクスペリエンス！',
-          2: 52,
-        },
-        {
-          1: 'パスパレ探検隊～無人島を征くアイドル～',
-          2: 4192,
-        },
-        {
-          1: 40,
-          2: 5,
-          3: 442,
-        },
-        72,
-        'オトモダチフィルム',
-      ];
-    </script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
   <script src="./assets/js/project.js"></script>
 </body>
+
 </html>

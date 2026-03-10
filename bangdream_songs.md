@@ -1,0 +1,911 @@
+# バンドリ! ガールズバンドパーティ! 楽曲一覧
+
+## Poppin'Party
+
+### オリジナル楽曲
+- ときめきエクスペリエンス！
+- キラキラだとか夢だとか 〜Sing Girils〜
+- Yes! BanG_Dream!
+- ティアドロップス
+- ぽっぴん'しゃっふる
+- STAR BEAT!〜ホシノコドウ〜
+- 夏空 SUN! SUN! SEVEN!
+- 走り始めたばかりのキミに
+- 1000回潤んだ空
+- Happy Happy Party!
+- 前へススメ！
+- キミにもらったもの
+- 夢見るSunflower
+- 夏のドーン！
+- 八月のif
+- Time Lapse
+- クリスマスのうた
+- B.O.F
+- CiRCLING
+- Light Delight
+- 私の心はチョココロネ
+- 二重の虹（ダブル レインボウ）
+- 最高（さあ行こう）！
+- ガールズコード
+- Home Street
+- キズナミュージック♪
+- Jumpin'
+- SAKURA MEMORIES
+- Returns
+- NO GIRL NO CRY
+- Dreamers Go!
+- アニバーサリー
+- 切ないSandglass
+- Hello! Wink!
+- What's the POPIPA!?
+- イニシャル
+- White Afternoon
+- 夢を撃ち抜く瞬間に！
+- 開けたらDream!
+- Step×Step!
+- ミライトレイン
+- Breakthrough!
+- Photograph
+- Sweets BAN!
+- Live Beyond!!
+- ここから先は歌にならない
+- 夏に閉じこめて
+- キミが始まる！
+- 勇気Limit!
+- イントロダクション
+- ぽっぴん'どりーむ！
+- 星の約束
+- 大好き！
+- Moonlight Walk
+- Future Place
+- Five Letters
+- RiNG A BELL
+- 新しい季節に
+- 最強☆ソング
+- ほな！
+- 青春 To Be Continued
+- Chu Chueen!
+- トレモロアイズ
+- 雨上がり、キミと
+- 花咲く未来に
+- DOKI DOKI SCARY
+- TARINAI
+- とっておきAnswer
+- Tomorrow's Door
+- Drive Your Heart
+- 世界中の青空をあつめて
+- どきどきデエト
+
+### カバー楽曲
+- 空色デイズ
+- Alchemy
+- 光るなら
+- Little Busters!
+- God knows...
+- only my railgun
+- 千本桜
+- 君じゃなきゃダメみたい
+- メランコリック
+- GLAMOROUS SKY
+- DAYS
+- Life Will Change
+- 夏祭り
+- ロミオとシンデレラ
+- 君に届け
+- Wake up!
+- 夜行性ハイズ
+- オトモダチフィルム
+- Daydream café
+- チェリボム
+- ディスカバリー！
+- ミュージック・アワー
+- ブルーバード
+- 群青日和
+- UNION
+- final phase
+- 青と夏
+- セツナトリップ
+- イエスタデイ
+- 春〜spring〜
+- 大河よ共に泣いてくれ
+- 怪物
+- ヴァンパイア
+- スターナイトスノウ
+- *〜アスタリスク〜
+- ヒロイン育成計画
+- 心絵
+- オドループ
+- HOT LIMIT
+- トウキョウ・シャンディ・ランデヴ
+- 私は最強
+- 怪獣の花唄
+- SOUVENIR
+- ちゅ、多様性。
+- STEP by STEP UP↑↑↑↑
+- フィクション
+- ロケットサイダー
+- つよがるガール feat. もっさ
+- POP IN 2
+- 恋人がサンタクロース
+- START!! True dreams
+
+## Afterglow
+
+### オリジナル楽曲
+- That Is How I Roll!
+- True color
+- Scarlet Sky
+- Hey-day狂騒曲
+- Y.O.L.O!!!!!
+- Jamboree!Journey!
+- COMIC PANIC!!!
+- ツナグ、ソラモヨウ
+- ランブリングメモリー
+- ON YOUR MARK
+- いつも通りのBrand new days
+- Easy come, Easy go!
+- Sasanqua
+- I love your way!
+- RED RED RED
+- I knew it!
+- ONE OF US
+- SENSENFUKOKU
+- カナユメ
+- Trouble Joyful!!
+- Off we go.
+- サクラゼンセン
+- SWITCH ON NOW
+- 独創収差
+- Punchline Halloween!!!
+- IGNITE GLOW
+- Made My Day
+- ペトリコール・オベーション
+- 極彩色
+- 燦々
+- That's why I'm here
+- A Sunset So Bright
+- Glowing After
+- Start as Usual
+- "Say cheese!!!!!"
+- 花笑みのデュオ
+- Against the Light
+- Feel so good!
+- Part of the Life
+- Choco Typhooooon!!
+
+### カバー楽曲
+- カルマ
+- Butter-Fly
+- Don't say "lazy"
+- great escape
+- アスノヨゾラ哨戒班
+- READY STEADY GO
+- Redo
+- プライド革命
+- イマジネーション
+- Reach Out To The Truth
+- ロストワンの号哭
+- Crow Song
+- 瞬間センチメンタル
+- らしさ
+- 午夜の待ち合わせ
+- 青い栞
+- アイのシナリオ
+- 天ノ弱
+- インフェルノ
+- ロキ
+- カサブタ
+- Rolling star
+- Northern lights
+- サムライハート (Some Like It Hot!!)
+- ハウトゥー世界征服
+- ヒューマノイド
+- ベノム
+- Listen!!
+- メンタルチェンソー
+- トーキョーワンダー。
+- abnormalize
+- 命に嫌われている。
+- CHAINSAW BLOOD
+- チルドレンレコード(Re:boot)
+- サウダージ
+- ヴィラン
+- テレキャスタービーボーイ
+- 粉雪
+- カオスが極まる
+- 青のすみか
+- 逆光
+- カゲロウデイズ
+- オレンジ
+- Bunny Girl
+- 愛唄
+- 季節は次々死んでいく
+
+## Pastel*Palettes
+
+### オリジナル楽曲
+- しゅわりん☆どり〜みん
+- パスパレボリューションず☆
+- はなまる◎アンダンテ
+- ゆら・ゆらRing-Dong-Dance
+- SURVIVOR ねばーぎぶあっぷ！
+- Wonderland Girl
+- 天下トーイツA to Z☆
+- もういちど ルミナス
+- ゼッタイ宣言〜Recital〜
+- ぎゅっDAYS♪
+- きゅ〜まい*flower
+- ワクワクmeetsトリップ
+- あっつあつ 常夏 らぶ☆サマー！
+- ゆめゆめグラデーション
+- Wonderful Sweet!
+- Winking☆Cheer
+- Power of LOVE!!!
+- TITLE IDOL
+- るんっ♪てぃてぃー！
+- パッパレ☆人生！バーン万歳！
+- Brand new Pastel Road!
+- あこがれacross
+- ハレハレ☆フォーチュン
+- ハナヒバナ
+- everyday flower
+- Radiate Warriors
+- ドラマチック！アライブ
+- ReReReエボリューションず☆
+- トリドリ＊パレット
+- フレっとパレットFight Song!!
+- With〜きみとわたしたちの物語〜
+- ホワイト ノスタルジア
+- デイオフ・ラフ・ラブ・サンクス
+- Y.O.L.O!!!!!(パスパレver.)
+- Shine ☆n My Life!
+- スキ×すき×カラフリィ
+- きみCharmin'
+- Thanks to you.
+
+### カバー楽曲
+- secret base 〜君がくれたもの〜
+- ドリームパレード
+- そばかす
+- MOON PRIDE
+- ふわふわ時間
+- はなまるぴっぴはよいこだけ
+- 世界は恋に落ちている
+- ハッピーシンセサイザ
+- SAKURAスキップ
+- みくみくにしてあげる♪【してやんよ】
+- 気まぐれロマンティック
+- Fantastic future
+- DISCOTHEQUE
+- ゆりゆららららゆるゆり大事件
+- 奏（かなで）
+- Q&A リサイタル！
+- Baby Sweet Berry Love
+- ときめきポポロン♪
+- 春擬き
+- からくりピエロ
+- Stay Alive
+- 花ハ踊レヤいろはにほ
+- ルカルカ★ナイトフィーバー
+- ノスタルジックレインフォール
+- DANCE! おジャ魔女
+- Make it!
+- 夜に駆ける
+- ラムのラブソング
+- 徒花ネクロマンシー
+- 春を告げる
+- Sparkling Daydream
+- 秘密の扉から会いにきて
+- 魔法少女とチョコレゐト
+- アイドル
+- ココ☆ナツ
+- だから、ひとりじゃない
+- オトナブルー
+- サインはB
+- すきっちゅーの！
+- 最上級にかわいいの!
+- アイワナムチュー
+- 恋愛サーキュレーション
+
+## Roselia
+
+### オリジナル楽曲
+- BLACK SHOUT
+- Re:birth day
+- LOUDER
+- 陽だまりロードナイト
+- 熱色スターマイン
+- -HEROIC ADVENT-
+- Determination Symphony
+- ONENESS
+- Opera of the wasteland
+- 軌跡
+- Neo-Aspect
+- Legendary
+- Sanctuary
+- R
+- PASSIONATE ANTHEM
+- BRAVE JEWEL
+- Safe and Sound
+- Ringing Bloom
+- FIRE BIRD
+- 約束
+- "UNIONS" Road
+- Song I am.
+- Break your desire
+- Avant-garde HISTORY
+- Blessing Chord
+- ZEAL of proud
+- Keep Heart
+- Proud of oneself
+- Original Call
+- overtuRe
+- Sing Alive
+- Singing "OURS"
+- Sprechchor
+- Our Carol
+- 閃光
+- THE HISTORIC…
+- ROZEN HORIZON
+- Swear ～Night & Day～
+- Dear Gleam
+- 一逢のFull Glory
+- Call the shots
+- Sunlit Musical
+- THRONE OF ROSE
+- 覚悟のLiberation
+- VIOLET LINE
+- Always recall.
+- Floral Haven
+- Sage der Rosen
+- 礎の花冠
+- FRONTIER FANTASIA
+- Grateful Melting
+- Second to None
+- Dazzle the Destiny
+- Requiem for Fate
+- 紫炎
+- Steadfast Spirits
+- Fear Nothing
+- Talk to My Tone
+
+### カバー楽曲
+- 魂のルフラン
+- Hacking to the Gate
+- ETERNAL BLAZE
+- 紅蓮の弓矢
+- The Everlasting Guilty Crown
+- Red fraction
+- 深愛
+- 残酷な天使のテーゼ
+- Shangri-La
+- This game
+- Believe in my existence
+- 六兆年と一夜物語
+- キミの記憶
+- シャルル
+- ツキアカリのミチシルベ
+- 名前のない怪物
+- 緋色の空
+- 海色
+- ファティマ
+- Paradisus-Paradoxum
+- 甲賀忍法帖
+- Bad Apple!! feat. nomico
+- 右肩の蝶
+- sister's noise
+- Synchrogazer
+- 鳥の詩
+- My Dearest
+- KING
+- SPARK-AGAIN
+- 廻廻奇譚
+- Realize
+- STYX HELIX
+- 新時代
+- 酔いどれ知らず
+- ファイトソング
+- ヒバナ-Reloaded-
+- 東京テディベア
+- slash
+- 乙女解剖
+- 人マニア
+- ファタール
+- Reweave
+- Fallen
+- Sincerely
+
+## ハロー、ハッピーワールド！
+
+### オリジナル楽曲
+- えがおのオーケストラっ！
+- ハピネスっ！ハピィーマジカルっ♪
+- ゴーカ!ごーかい!?ファントムシーフ!
+- せかいのっびのびトレジャー！
+- YAPPY! SCHOOL CARNIVAL☆彡
+- わちゃ・もちゃ・ぺったん行進曲
+- ふわふわ☆ゆめいろサンドイッチ
+- ハイファイブ∞あどべんちゃっ
+- キミがいなくちゃっ！
+- はれやか すこやか ぴかりんりん♪
+- えがお・シング・あ・ソング
+- にこ×にこ＝ハイパースマイルパワー！
+- スマイルブーケで た〜まや〜！
+- おもいでイルミネーション
+- うぃーきゃん☆フレフレっ！
+- えがお、み〜っけた！
+- にこにこねくと！
+- ないすみちゅっ！
+- きらっ☆と キミフェス！
+- 現るっ！大怪盗ハロハッピー！
+- おもいやりハーモニー
+- Happy! Happier! Happiest!
+- うちゃパ！で ぱっぴかポーんっ！
+- えがお、あーゆーれでぃ???
+- キミを れっつ・はぶ・ふぁん♪
+- ボクらの夏's☆ショーたいむっ！！
+- ふぁいぶスマイル◯オールインっ！
+- らいふ・いず・みゅーじかるっ♪♪♪
+- むすんでわらって
+- サンバロハッピ〜！
+- Listen to Smile!
+- ハイタッチ／＼びりーばーず☆
+- れっつ・スマイル・すとり〜みんぐっ♪
+- やっほー！いっぽ！わんだふぉー！
+- スタ〜リング ☆じぶん☆
+- とーくとぅみー・とーくとぅゆー
+- まぶしいねっ☆そのえがお！
+- スマイリーキャロル
+
+### カバー楽曲
+- シュガーソングとビターステップ
+- いーあるふぁんくらぶ
+- シルエット
+- ハッピーサマーウェディング
+- ひまわりの約束
+- ロメオ
+- 恋は渾沌の隷也
+- Dragon Night
+- fantastic dreamer
+- 太陽曰く燃えよカオス
+- GO! GO! MANIAC
+- エイリアンエイリアン
+- 新宝島
+- エクストラ・マジック・アワー
+- 回レ！雪月花
+- StaRt
+- ノーポイッ！
+- 恋愛裁判
+- 上海ハニー
+- コレカラ
+- 全力少年
+- ドレミファロンド
+- POP TEAM EPIC
+- ウィーアー！
+- おジャ魔女カーニバル!!
+- 好き！雪！本気マジック
+- オレンジ
+- SHINY DAYS
+- Happy Girl
+- ン・パカマーチ
+- ハッピー☆マテリアル
+- くちづけDiamond
+- ヒャダインのじょーじょーゆーじょー
+- Storyteller
+- ミックスナッツ
+- ようこそジャパリパークへ
+- ダーリンダンス
+- アイウエ
+- 愛のしるし
+- ダンスホール
+- エゴロック
+- 強風オールバック
+- きゅうくらりん
+- ギミー!レボリューション
+- クラクラ
+- はいよろこんで
+- 最高到達点
+- 怪獣
+- ミラクルペイント
+- マツケンサンバII
+
+## Morfonica
+
+### オリジナル楽曲
+- Daylight -デイライト-
+- 金色へのプレリュード
+- ブルームブルーム
+- flame of hope
+- ハーモニー・デイ
+- Sonorous
+- Secret Dawn
+- fly with the night
+- Fateful…
+- One step at a time
+- 寄る辺のSunny,Sunny
+- カラフルリバティー
+- The Circle Of Butterflies
+- Sweet Cheers!
+- Angel's Ladder
+- 音がえしのセレナーデ
+- Ever Sky Blue
+- Merry Merry Thanks!!
+- 蒼穹へのトレイル
+- 誓いのWingbeat
+- 両翼のBrilliance
+- メランコリックララバイ
+- Wreath of Brave
+- ティリカモニカリラ
+- Tempest
+- Steer to Utopia
+- Polyphonyscape
+- Portray Empathy
+- Feathered Dreams
+- Color of Us
+- Resonant Strings
+- ビューティ・フォー
+- Shining Leaves
+
+### カバー楽曲
+- メリッサ
+- chAngE
+- 秒針を噛む
+- LEVEL5-judgelight-
+- 深海少女
+- Nevereverland
+- CQCQ
+- アゲハ蝶
+- V.I.P
+- COLORFUL BOX
+- 月光花
+- unravel
+- ボクノート
+- Memento
+- divine intervention
+- Nameless Story
+- ALIVE
+- QUEEN
+- 祝福
+- Overdose
+- かくれんぼ
+- 勇者
+- 輪舞-revolution
+- again
+- オン・ザ・フロントライン
+- 白い雪のプリンセスは
+
+## RAISE A SUILEN
+
+### オリジナル楽曲
+- R・I・O・T
+- UNSTOPPABLE
+- A DECLARATION OF ×××
+- EXPOSE 'Burn out!!!'
+- !NVADE SHOW!
+- Beautiful Birthday
+- mind of Prominence
+- OUTSIDER RODEO
+- EXIST
+- Domination to world
+- 灼熱 Bonfire!
+- Sacred world
+- HELL! or HELL?
+- Embrace of light
+- CORUSCATE -DNA-
+- Repaint
+- DRIVE US CRAZY
+- Light a fire
+- SOUL SOLDIER
+- THE WAY OF LIFE
+- Invincible Fighter
+- Takin' my Heart
+- DEAD HEAT BEAT
+- DANCING DARING
+- BATTLE CRY
+- -N-E-M-E-S-I-S-
+- Ray of hope
+- Life on the Lotus
+- V.I.P MONSTER
+- Bad Kids All Bet
+- JUST THE WAY I AM
+- VIVID FIRST TIME
+- WELCOME TO PANDEMONIUM
+- HOWLING AMBITION
+- REIGNING
+- FIVE as ONE
+- 'FIGHT' ADDICT
+- BIBIBABI BRAVER
+- Drown Out the Noise and Push Through the Trash
+- RUNAWAY STAR
+
+### カバー楽曲
+- 1/3の純情な感情
+- 激動
+- ヒトリノ夜
+- 劣等上等
+- 恋しさと せつなさと 心強さと
+- ブリキノダンス
+- DAYBREAK FRONTLINE
+- CORE PRIDE
+- Keep the Heat and Fire Yourself Up
+- DEPARTURES
+- Just Awake
+- 脳漿炸裂ガール
+- Cry Baby
+- メギツネ
+- 狂乱 Hey Kids!!
+- 神っぽいな
+- Get Wild
+- D-tecnoLife
+- 裸の勇者
+- 第ゼロ感
+- ボッカデラベリタ
+- SOULSOUP
+- Bling-Bang-Bang-Born
+- 第六感
+- 百花繚乱
+- BROKEN GAMES
+
+## MyGO!!!!!
+
+### オリジナル楽曲
+- 迷星叫
+- 壱雫空
+- 栞
+- 碧天伴走
+- 詩超絆
+- 迷路日々
+- 影色舞
+- 歌いましょう鳴らしましょう
+- 処救生
+- 輪符雨
+- 名無声
+- 過惰幻
+- 歩拾道
+- 音一会
+- 聿日箋秋
+- 焚音打
+- 潜在表明
+- 残痕字
+- 往欄印
+- エガクミライ
+- 端程山
+
+### カバー楽曲
+- 猛独が襲う
+- swim
+- ホワイトノイズ
+- ノンブレス・オブリージュ
+- 「僕は…」
+- 雑踏、僕らの街
+- 遥か彼方
+- Subtitle
+- だれかの心臓になれたなら
+- Velonica
+
+## Ave Mujica
+
+### オリジナル楽曲
+- Ave Mujica
+- KiLLKiSS
+- Georgette Me, Georgette You
+- Imprisoned XII
+- Crucifix X
+- 八芒星ダンス
+- 顔
+- 天球(そら)のMúsica
+- 黒のバースデイ
+- Mas?uerade Rhapsody Re?uest
+
+## その他
+
+### オリジナル楽曲
+- Don't be afraid!
+- どきどきSINGOUT!
+- 花園電気ギター!!!
+- チョコレイトの低音レシピ
+- 遠い音楽〜ハートビート〜
+- す、好きなんかじゃない！
+- クインティプル☆すまいる
+- ピコっと！パピっと!!ガルパ☆ピコ!!!
+- ひとりじゃないんだから
+- TWiNKLE CiRCLE
+- 大盛り一丁！ガルパ☆ピコ
+- 絆色のアンサンブル
+- ラスハピーポー！
+- 競宴Red×Violet
+- ピコたるもの、ふぃーばー！
+- ナカナ イナ カナイ
+- CATASTROPHE BANQUET
+- CiRCLE THANKS MUSiC♪
+- Freedom
+- See you! 〜それぞれの明日へ〜
+- Glee! Glee! Glee!
+- 花呼ぶ声
+- 私色きらめき日和
+- Be born
+- グッド・バイ
+- 迷星叫(パラレルver.)
+- マルカリアンチェイン
+- Blessing Chord(パラレルver.)
+- 春日影
+- ひとりじゃないんだから(パラレルver.)
+- えがおのオーケストラっ！(パラレルver.)
+- 雪華は無常に微笑む
+- 走り始めたばかりのキミに(パラレルver.)
+- flame of hope(パラレルver.)
+- 元祖！バンドリちゃんのテーマ
+- Singer
+- 手を叩け今ここで祈るだけ願うだけ
+- きゅ〜まい＊flower(パラレルver.)
+- Determination Symphony(パラレルver.)
+- 熱色スターマイン(パラレルver.)
+- Wonder Night Land
+
+### カバー楽曲
+- 正解はひとつ！じゃない!!
+- 天体観測
+- ハレ晴レユカイ
+- 革命デュアリズム
+- 檄！帝国華撃団
+- 創聖のアクエリオン
+- GO!!!
+- SAVIOR OF SONG
+- ムーンライト伝説
+- ドラマツルギー
+- シル・ヴ・プレジデント
+- グッバイ宣言
+- 曇天
+- Preserved Roses
+- もってけ!セーラーふく
+- 群青
+- 閃光
+- YELL
+- 五等分の気持ち
+- 少女レイ
+- チューリングラブ
+- 踊
+- 惑星ループ
+- 可愛くてごめん
+- どりーみんチュチュ
+- Surges
+- 愛包ダンスホール
+- 幾億光年
+- シカ色デイズ
+- 悪魔の子
+- I wonder
+- Same Blue
+- デビルじゃないもん
+- イケナイ太陽
+
+### エクストラ楽曲
+- DAYS of DASH
+- TOMORROW
+- ファンサ
+- ぼなぺてぃーと♡S
+- あの夢をなぞって
+- COLORS
+- ヒトリゴト
+- 青空のラプソディ
+- スカイクラッドの観測者
+- VORACITY
+- シル・ヴ・プレジデント
+- 乙女はサイコパス
+- フォニイ
+- 転生林檎
+- 聖少女領域
+- 擬態ごっこ
+- Stellar Stellar
+- Ahoy!! 我ら宝鐘海賊団☆
+- Fleur
+- Lioness' Pride
+- じょいふる
+- ♡桃色片想い♡
+
+### 期間限定楽曲
+- [原曲] final phase
+- 優勝 feat.Afterglow
+- もういちど ルミナス（コラボver）
+- [超高難易度 新SPECIAL] HELL! or HELL?
+- [超高難易度 新SPECIAL] 六兆年と一夜物語
+- 合縁事変
+- [超高難易度 新SPECIAL] SENSENFUKOKU
+- ピコっと！パピっと!!ガルパ☆ピコ!!![期間限定バージョン]
+- Mystic Light Quest
+
+## ゲーム追加予定及び未収録楽曲
+
+### オリジナル楽曲
+- キラキラスター！
+- フレージング ミラージュ
+- MUGEN Reverberate!
+- わたしまちがいさがし
+- esora no clover
+- きょうもMerry go rounD
+- Apocalypse
+- TWIN TALE
+- STRAY CERBERUS
+- BERSER-KEY
+- POLARIS
+- 無路矢
+- 砂寸奏
+- 回層浮
+- 孤壊牢
+- 明弦音
+- 霧周途
+- 夜隠染
+- 掌心正銘
+- 静降想
+- ふたつの月 ~Deep Into The Forest~
+- Choir 'S' Choir
+- 神さま、バカ
+- 素晴らしき世界 でも どこにもない場所
+- Angles
+- Symbol I : △
+- Symbol II : Air
+- Symbol III : ▽
+- Symbol IV : Earth
+- Ether
+- 'S/' The Way
+- Sophie
+- コミュ着火Fire!
+- 新人類は仮想世界の夢を見るか?
+- コハク
+- Hi-Vision
+- TRASH LIFE
+- テレパシー
+- 真夜中遊園地
+- グラディエント
+- LET'Sあちあちトレーニング！
+- アイの夢限
+- どんがらがっしゃん
+- みゅーたんとミュータント
+- チューニング
+- Dream Voyage
+- Calling
+- Be shine, shining!
+- 雨上がりの夢
+- 人間になりたいうた
+- コンペイトウさん過激派
+- 明晰メモリー
+- だって、キラキラ。
+- ラビリンス
+- バズらない愛
+- 天使倶楽部
+- チャーリイ
+- alternative
+- LC
+- Starry Phrase！
+- 停止線上の障壁（バリア）
+- 世界中に響く耳鳴りの導火線に火をつけて
+- Little Lazy Princess
+- 汀の宿
+- ポータルＢ
+- Hatch
+- Leap up Lollipop
+- 役にすがる
+- 変身シンドローム
+- エトス
+- シテキセイサイ
+- SUSHI-GO-ROUND
+- I no rockstar
+- 禁略フォビドゥン
+- ユーフォリア
+- ヌード
+- antidote
+- 流れ星のDarling
+- 比較言語学における陰謀的研究法の可能性について
+- 最も濃いもの
+- 心の愛
+- あなたなんて幻
+- 私がマスター
+- 怪電話
+- Freak Out Hr.
+- 透明の縁
+
+### カバー楽曲
+- 君の神様になりたい。
+- 暗黒天国
+- 堕天
+- KINGS
+- すべてがそこにありますように。
