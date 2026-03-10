@@ -1,6 +1,4 @@
 <?php
-ob_start(); // 出力バッファリング開始（警告出力によるheader()失敗を防止）
-
 // パラメータがない場合はエラーページにリダイレクト
 if (!isset($_GET['json_param']) || $_GET['json_param'] === '') {
   header('Location: ./error/');
@@ -49,7 +47,8 @@ function decode_json_param(string $param)
   if (!function_exists('bzdecompress')) {
     throw new Exception('bzip2(bz2) 拡張が有効ではありません。');
   }
-  $decompressed = @bzdecompress($plain); // @で警告を抑制
+
+  $decompressed = bzdecompress($plain);
   if (!is_string($decompressed)) {
     throw new Exception("bzip2 解凍に失敗しました。");
   }
@@ -141,7 +140,7 @@ try {
     throw new Exception('JSON デコードに失敗しました: ' . json_last_error_msg());
   }
 } catch (Throwable $e) {
-  header('Location: ./error/');
+  header('Location: ./error/?msg=' . urlencode($e->getMessage()));
   exit;
 }
 

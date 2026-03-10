@@ -663,9 +663,7 @@ const drawGraph = (ctx, clearRateData = {}) => {
     const rate = total > 0 ? (cleared / total) * 100 : 0;
     const clampedRate = Math.max(0, Math.min(rate, 100));
     const renderedRate =
-      clampedRate > 0
-        ? Math.max(clampedRate, GRAPH_STYLE.minBarRate)
-        : 0;
+      clampedRate > 0 ? Math.max(clampedRate, GRAPH_STYLE.minBarRate) : 0;
 
     const barHeight = ((chartBottom - chartTop) * renderedRate) / 100;
     const x = chartLeft + 27 + index * (barWidth + barGap);

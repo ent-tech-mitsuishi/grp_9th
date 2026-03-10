@@ -57,6 +57,7 @@ function decode_json_param(string $param)
   if (!function_exists('bzdecompress')) {
     throw new Exception('bzip2(bz2) 拡張が有効ではありません。');
   }
+
   $decompressed = bzdecompress($plain);
   if (!is_string($decompressed)) {
     throw new Exception("bzip2 解凍に失敗しました。");
@@ -265,7 +266,7 @@ $user = $d['0'] ?? [];
                       <h3>集めたメンバー</h3>
                       <div class="top-player__data-dtl">
                         <p class="top-player__data-txt">
-                          <span class="number"></span> 枚
+                          <span class="number"></span>
                         </p>
                       </div>
                     </div>
@@ -436,70 +437,6 @@ $user = $d['0'] ?? [];
       </article>
     </main>
     <%# ここから上にhtml書いてね このコメントは反映されません%>
-    <script>
-      var data = [
-        {
-          1: 1001,
-          2: '新人スタッフ',
-          3: '20160108',
-        },
-        3052,
-        {
-          1: 3,
-          2: 1,
-          3: '約束のキャンディ',
-        },
-        {
-          1: 'ときめきエクスペリエンス！',
-          2: 'キラキラだとか夢だとか ～Sing Girls～',
-          3: 'YAPPY！SCHOOL CARNIVAL☆彡',
-          4: "What's the POPIPA!?",
-          5: '誓いのWingbeat',
-        },
-        {
-          1: 512,
-          2: 780,
-        },
-        1,
-        {
-          1: {
-            1: 740,
-            2: 752,
-          },
-          2: {
-            1: 651,
-            2: 752,
-          },
-          3: {
-            1: 501,
-            2: 752,
-          },
-          4: {
-            1: 97,
-            2: 752,
-          },
-          5: {
-            1: 15,
-            2: 431,
-          },
-        },
-        {
-          1: 'ときめきエクスペリエンス！',
-          2: 52,
-        },
-        {
-          1: 'パスパレ探検隊～無人島を征くアイドル～',
-          2: 4192,
-        },
-        {
-          1: 40,
-          2: 5,
-          3: 442,
-        },
-        72,
-        'オトモダチフィルム',
-      ];
-    </script>
     <%- include( `${relative_path}_partial/_foot`,{lang:lang,pageID:pageID,relative_path:relative_path}) %>
   </body>
 </html>

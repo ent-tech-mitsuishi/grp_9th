@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
       renderer: 'svg',
       loop: true,
       autoplay: false,
-      path: '../assets/data/json/loading.json',
+      path: '/circle-newsletter/assets/data/json/loading.json',
     });
   }
 
