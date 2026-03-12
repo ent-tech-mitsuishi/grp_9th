@@ -362,11 +362,9 @@
     font-weight: $w_black;
     text-align: center;
     letter-spacing: -0.05em;
-    padding-bottom: get_vw(50);
 
     @include min-screen() {
       font-size: get_px(96);
-      padding-bottom: get_px(50);
     }
   }
 
@@ -404,10 +402,12 @@
     font-size: get_vw(32);
     font-weight: $w_bold;
     margin-top: get_vw(20);
+    padding-bottom: get_vw(50);
 
     @include min-screen() {
       font-size: get_px(32);
       margin-top: get_px(20);
+      padding-bottom: get_px(50);
     }
 
     .card-name {

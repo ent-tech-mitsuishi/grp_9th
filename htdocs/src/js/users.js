@@ -167,16 +167,16 @@
         items[0]
       );
 
-    // 2) 一番集めているキャラクター（名前）
-    if (items[1])
-      setText('.top-player__data-name', charNameById(mostCharId), items[1]);
-
-    // 3) 最初に引いたメンバー（名前 / ★ / カード名）
-    if (items[2]) {
-      setText('.top-player__data-name', charNameById(first['2']), items[2]);
-      setText('.card-star', stars(first['1']), items[2]);
-      setText('.card-name', first['3'], items[2]);
+    // 2) 最初に引いたメンバー（名前 / ★ / カード名）
+    if (items[1]) {
+      setText('.top-player__data-name', charNameById(first['2']), items[1]);
+      setText('.card-star', stars(first['1']), items[1]);
+      setText('.card-name', first['3'], items[1]);
     }
+
+    // 3) 一番集めているキャラクター（名前）
+    if (items[2])
+      setText('.top-player__data-name', charNameById(mostCharId), items[2]);
 
     // 下部のキャラ画像（最も集めているキャラ）
     const id = safeNum(mostCharId);
