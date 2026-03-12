@@ -2070,11 +2070,87 @@ picture {
 .top-flyer__txt {
   margin: 2.6666666667vw auto 0;
   width: 56.9333333333vw;
+  display: none;
 }
 @media only screen and (min-width: 751px) {
   .top-flyer__txt {
     margin-top: 12px;
     width: 256.2px;
+  }
+}
+.top-flyer__btn {
+  background-color: #e34557;
+  border-radius: 5.7333333333vw;
+  color: #fff;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-size: 4.2666666667vw;
+  font-weight: 900;
+  margin: 4.6666666667vw auto 0;
+  width: 52.2666666667vw;
+  height: 11.7333333333vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9333333333vw;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+@media only screen and (min-width: 751px) {
+  .top-flyer__btn {
+    border-radius: 25.8px;
+    font-size: 19.2px;
+    margin-top: 21px;
+    width: 235.2px;
+    height: 52.8px;
+    gap: 4.2px;
+    transition: all 300ms;
+  }
+  .top-flyer__btn:hover {
+    opacity: 0.8;
+  }
+}
+.top-flyer__btn span {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+.top-flyer__btn:before {
+  display: block;
+  content: "";
+  background-color: rgba(255, 161, 172, 0.4);
+  clip-path: polygon(0 0, 100% 0%, 55% 100%, 0% 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34.9333333333vw;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+@media only screen and (min-width: 751px) {
+  .top-flyer__btn:before {
+    width: 157.2px;
+  }
+}
+.top-flyer__btn:after {
+  display: block;
+  content: "";
+  border: 0.2666666667vw solid #ffa9b3;
+  border-radius: 5.7333333333vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+@media only screen and (min-width: 751px) {
+  .top-flyer__btn:after {
+    border-radius: 25.8px;
+    border-width: 1.2px;
   }
 }
 
