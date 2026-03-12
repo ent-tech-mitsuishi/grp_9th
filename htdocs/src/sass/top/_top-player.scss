@@ -595,15 +595,12 @@
 
   &__graph-item {
     background-color: $c_black;
-    // padding-bottom: get_vw(40);
     width: get_vw(70);
-    min-height: 10%;
     position: absolute;
     bottom: 0;
     z-index: 2;
 
     @include min-screen() {
-      // padding-bottom: get_px(40);
       width: get_px(70);
     }
 

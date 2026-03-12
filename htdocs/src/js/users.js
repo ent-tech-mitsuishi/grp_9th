@@ -24,6 +24,7 @@
     el.setAttribute(attr, v == null ? '' : String(v));
   };
   const safeStr = (v) => (v == null ? '' : String(v));
+  const normalizeSongTitle = (v) => safeStr(v).replaceAll("甅", "【FULL】");
   const safeNum = (v) => {
     const n = Number(v);
     return Number.isFinite(n) ? n : 0;
@@ -218,7 +219,7 @@
     if (songWrap) {
       const setSong = (level, key) => {
         const p = qs(`.level[data-level="${level}"] p`, songWrap);
-        if (p) p.textContent = safeStr(fullcombo[key]);
+        if (p) p.textContent = normalizeSongTitle(fullcombo[key]);
       };
       setSong('EASY', '1');
       setSong('NORMAL', '2');
@@ -235,9 +236,12 @@
       const p = qs('.top-player__data-txt', topItem);
       if (p) {
         p.textContent = ` ${safeStr(topEvent['1'])} `;
-        const spn = document.createElement('span');
-        spn.textContent = `（${safeStr(topEvent['2'])}位）`;
-        p.appendChild(spn);
+        const rank = Number(safeStr(topEvent['2']));
+        if (Number.isFinite(rank) && rank !== 0) {
+          const spn = document.createElement('span');
+          spn.textContent = `（${rank}位）`;
+          p.appendChild(spn);
+        }
       }
     }
 
@@ -246,6 +250,6 @@
       safeStr(qs('h3', item)?.textContent).includes('同期')
     );
     if (syncItem)
-      setText('.top-player__data-txt', ` ${safeStr(syncSong)} `, syncItem);
+      setText('.top-player__data-txt', ` ${normalizeSongTitle(syncSong)} `, syncItem);
   }
 })();
