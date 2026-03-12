@@ -142,8 +142,7 @@
     }
   }
 
-  &__label-name,
-  &__label-date {
+  &__label-name {
     font-family: $font_baskerville;
     font-size: get_vw(16);
     font-weight: $w_bold;
