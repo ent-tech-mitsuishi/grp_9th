@@ -594,7 +594,6 @@
   }
 
   &__graph-item {
-    background-color: $c_black;
     width: get_vw(70);
     position: absolute;
     bottom: 0;
@@ -604,48 +603,100 @@
       width: get_px(70);
     }
 
+    &-bg {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: get_vw(70);
+      height: 100%;
+
+      @include min-screen() {
+        width: get_px(70);
+      }
+    }
+
     &.is-easy {
-      background-color: #a6c4ff;
       left: get_vw(108);
 
       @include min-screen() {
         left: get_px(108);
       }
+
+      & + .top-player__graph-item-bg {
+        background-color: #a6c4ff;
+        left: get_vw(108);
+
+        @include min-screen() {
+          left: get_px(108);
+        }
+      }
     }
 
     &.is-normal {
-      background-color: #93ffc1;
       left: get_vw(226);
 
       @include min-screen() {
         left: get_px(226);
       }
+
+      & + .top-player__graph-item-bg {
+        background-color: #93ffc1;
+        left: get_vw(226);
+
+        @include min-screen() {
+          left: get_px(226);
+        }
+      }
     }
 
     &.is-hard {
-      background-color: #ffeb97;
       left: get_vw(350);
 
       @include min-screen() {
         left: get_px(350);
       }
+
+      & + .top-player__graph-item-bg {
+        background-color: #ffeb97;
+        left: get_vw(350);
+
+        @include min-screen() {
+          left: get_px(350);
+        }
+      }
     }
 
     &.is-expert {
-      background-color: #ffc4c4;
       left: get_vw(472);
 
       @include min-screen() {
         left: get_px(472);
       }
+
+      & + .top-player__graph-item-bg {
+        background-color: #ffc4c4;
+        left: get_vw(472);
+
+        @include min-screen() {
+          left: get_px(472);
+        }
+      }
     }
 
     &.is-special {
-      background-color: #ffa9e8;
       left: get_vw(590);
 
       @include min-screen() {
         left: get_px(590);
+      }
+
+      & + .top-player__graph-item-bg {
+        background-color: #ffa9e8;
+        left: get_vw(590);
+
+        @include min-screen() {
+          left: get_px(590);
+        }
       }
     }
   }
@@ -657,14 +708,14 @@
     text-align: center;
     letter-spacing: -0.05em;
     position: absolute;
-    top: get_vw(-90);
+    top: get_vw(-82);
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
 
     @include min-screen() {
       font-size: get_px(33);
-      top: get_px(-90);
+      top: get_px(-82);
     }
 
     span {

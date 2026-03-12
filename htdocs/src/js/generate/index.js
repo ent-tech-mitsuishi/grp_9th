@@ -100,9 +100,19 @@ const GRAPH_STYLE = {
   },
 };
 
-const BASE_IMAGE_PATH = './assets/img/generate/base/base.jpg';
-const CATCH_IMAGE_PATH = './assets/img/generate/base/catch.png';
-const CHARACTER_IMAGE_BASE = './assets/img/generate/chara';
+const detectAssetBasePath = () => {
+  const marker = 'assets/img/';
+  const imageWithAssetPath = document.querySelector(`img[src*="${marker}"]`);
+  const src = imageWithAssetPath?.getAttribute('src') || '';
+  const markerIndex = src.indexOf(marker);
+  if (markerIndex < 0) return './assets';
+  return src.slice(0, markerIndex + 'assets'.length);
+};
+
+const ASSET_BASE_PATH = detectAssetBasePath();
+const BASE_IMAGE_PATH = `${ASSET_BASE_PATH}/img/generate/base/base.jpg`;
+const CATCH_IMAGE_PATH = `${ASSET_BASE_PATH}/img/generate/base/catch.png`;
+const CHARACTER_IMAGE_BASE = `${ASSET_BASE_PATH}/img/generate/chara`;
 const DOWNLOAD_FILE_PREFIX = 'garupa9th_flyer';
 const FONT_FACE_ROBOTO = '"Roboto"';
 const FONT_FACE_ZEN_KAKU = '"Zen Kaku Gothic Antique"';
@@ -672,7 +682,7 @@ const drawGraph = (ctx, clearRateData = {}) => {
   const levels = [1, 2, 3, 4, 5];
   const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
-  levels.forEach((level) => {
+  levels.forEach((level, index) => {
     const raw = clearRateData[level] || {};
     const cleared = safeNumber(raw[1]);
     const total = safeNumber(raw[2]);
@@ -978,7 +988,9 @@ window.addEventListener('load', () => {
       });
     });
   }
-  drawGeneratedImage().catch((error) => {});
+  drawGeneratedImage().catch((error) => {
+    console.warn('画像生成の初期表示に失敗しました', error);
+  });
 });
 
 // Capture a local immutable snapshot as early as possible.

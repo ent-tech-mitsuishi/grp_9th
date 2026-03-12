@@ -95,8 +95,11 @@
     const c = safeNum(cleared);
     const t = safeNum(total);
     const pct = t > 0 ? (c / t) * 100 : 0;
+    const displayPct = Math.max(pct, 10);
 
-    el.style.height = `${pct.toFixed(1)}%`;
+    el.style.height = `${displayPct.toFixed(1)}%`;
+    const bg = qs(`${selector} + .top-player__graph-item-bg`);
+    if (bg) bg.style.height = `${pct.toFixed(1)}%`;
 
     const spans = el.querySelectorAll('.top-player__graph-score span');
     if (spans[0]) spans[0].textContent = String(c);
