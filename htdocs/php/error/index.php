@@ -64,7 +64,6 @@
         <div class="common__container">
           <div class="common__label">
             <p class="common__label-name">NEWSLETTER</p>
-            <p class="common__label-date">2026.3.16</p>
           </div>
           <span class="common__line rotate"></span>
           <h1 class="common__h1">
