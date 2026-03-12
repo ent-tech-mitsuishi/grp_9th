@@ -89,7 +89,15 @@ const GRAPH_STYLE = {
     denominatorOffsetY: -15,
     barOffsetY: -32,
   },
-  minBarRate: 10,
+  tenPercentCenterOffsetY: 180,
+  labelBounds: {
+    top: 56,
+    bottom: 24,
+  },
+  rateBounds: {
+    top: 20,
+    bottom: 0,
+  },
 };
 
 const BASE_IMAGE_PATH = './assets/img/generate/base/base.jpg';
@@ -283,7 +291,7 @@ const TEXT_STYLE = {
   },
 };
 
-const getCharacterName = (id) => CHARACTER_NAMES[id] || `キャラID:${id}`;
+const getCharacterName = (id) => CHARACTER_NAMES[id] || `-`;
 const getDifficultyName = (level) => DIFFICULTY_LABELS[level] || `Lv.${level}`;
 
 const formatDate = (raw) => {
@@ -295,6 +303,13 @@ const formatDate = (raw) => {
 const safeNumber = (value) => {
   const num = Number(value);
   return Number.isFinite(num) ? num : 0;
+};
+
+const normalizeSpecialSongPrefix = (text) => {
+  const value = String(text ?? '');
+  if (!value.startsWith('甅')) return value;
+  const trimmed = value.replace(/^甅[\s\u3000]*/, '');
+  return trimmed ? `【FULL】 ${trimmed}` : '【FULL】';
 };
 
 const cloneData = (source) => {
@@ -581,7 +596,7 @@ const drawSongs = (ctx, songs) => {
   };
 
   [1, 2, 3, 4, 5].forEach((level, index) => {
-    const songName = songs[level] || '';
+    const songName = normalizeSpecialSongPrefix(songs[level] || '');
     const y = SONG_STYLE.startY + index * SONG_STYLE.stepY;
     const baseOptions = {
       color: SONG_STYLE.color,
@@ -655,15 +670,15 @@ const drawGraph = (ctx, clearRateData = {}) => {
   const { chartLeft, chartTop, chartBottom, barWidth, barGap, colors } =
     GRAPH_STYLE;
   const levels = [1, 2, 3, 4, 5];
+  const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 
-  levels.forEach((level, index) => {
+  levels.forEach((level) => {
     const raw = clearRateData[level] || {};
     const cleared = safeNumber(raw[1]);
     const total = safeNumber(raw[2]);
     const rate = total > 0 ? (cleared / total) * 100 : 0;
     const clampedRate = Math.max(0, Math.min(rate, 100));
-    const renderedRate =
-      clampedRate > 0 ? Math.max(clampedRate, GRAPH_STYLE.minBarRate) : 0;
+    const renderedRate = clampedRate;
 
     const barHeight = ((chartBottom - chartTop) * renderedRate) / 100;
     const x = chartLeft + 27 + index * (barWidth + barGap);
@@ -672,13 +687,33 @@ const drawGraph = (ctx, clearRateData = {}) => {
     ctx.fillStyle = colors[index];
     ctx.fillRect(x, y, barWidth, barHeight);
 
-    drawFraction(ctx, cleared, total, x + barWidth / 2, y);
-    // Place the rate label at the vertical center of rendered bar.
+    const tenPercentTopY = chartBottom - ((chartBottom - chartTop) * 10) / 100;
+    const fractionYSafeForLowRate = clamp(
+      tenPercentTopY,
+      chartTop + GRAPH_STYLE.labelBounds.top,
+      chartBottom - GRAPH_STYLE.labelBounds.bottom
+    );
+    const fractionY = clampedRate <= 10 ? fractionYSafeForLowRate : y;
+    drawFraction(ctx, cleared, total, x + barWidth / 2, fractionY);
+    // Keep % at bar center, but pin only <10% to 10% center.
+    const centerYForRate = y + barHeight / 2;
+    const tenPercentCenterY =
+      chartBottom -
+      ((chartBottom - chartTop) * 10) / 200 +
+      GRAPH_STYLE.tenPercentCenterOffsetY;
+    const rateLabelBaseY = clampedRate < 10 ? tenPercentCenterY : centerYForRate;
+    // Keep the label center above chart bottom line.
+    const rateBottomLimit = chartBottom - GRAPH_STYLE.rate.size / 2;
+    const rateY = clamp(
+      rateLabelBaseY,
+      chartTop + GRAPH_STYLE.rateBounds.top,
+      rateBottomLimit - GRAPH_STYLE.rateBounds.bottom
+    );
     drawText(
       ctx,
       `${rate.toFixed(1)}%`,
       x + barWidth / 2,
-      y + barHeight / 2,
+      rateY,
       GRAPH_STYLE.rate
     );
   });
@@ -805,13 +840,16 @@ const drawGeneratedImage = async () => {
     TEXT_LAYOUT.member.firstMemberStar.y,
     TEXT_LAYOUT.member.firstMemberStar
   );
-  drawText(
-    ctx,
-    firstDraw[3] || '',
-    TEXT_LAYOUT.member.firstMemberTitle.x,
-    TEXT_LAYOUT.member.firstMemberTitle.y,
-    TEXT_LAYOUT.member.firstMemberTitle
-  );
+  const firstMemberTitle = String(firstDraw[3] || '');
+  if (firstMemberTitle !== '-') {
+    drawText(
+      ctx,
+      firstMemberTitle,
+      TEXT_LAYOUT.member.firstMemberTitle.x,
+      TEXT_LAYOUT.member.firstMemberTitle.y,
+      TEXT_LAYOUT.member.firstMemberTitle
+    );
+  }
 
   const firstTopEventName = topEvent[1] || '';
   setFont(
@@ -843,17 +881,20 @@ const drawGeneratedImage = async () => {
   const eventLineCount = Math.max(1, Math.min(eventLines.length, 2));
   const eventRankY =
     TEXT_STYLE.eventRank.y - (2 - eventLineCount) * TEXT_STYLE.event.lineStep;
-  drawText(
-    ctx,
-    `(${safeNumber(topEvent[2])}位)`,
-    TEXT_STYLE.eventRank.x,
-    eventRankY,
-    TEXT_STYLE.eventRank
-  );
+  const eventRank = safeNumber(topEvent[2]);
+  if (eventRank > 0) {
+    drawText(
+      ctx,
+      `(${eventRank}位)`,
+      TEXT_STYLE.eventRank.x,
+      eventRankY,
+      TEXT_STYLE.eventRank
+    );
+  }
 
   drawTextWithEllipsis(
     ctx,
-    data[11] || '',
+    normalizeSpecialSongPrefix(data[11] || ''),
     TEXT_STYLE.syncedSong.x,
     TEXT_STYLE.syncedSong.y,
     TEXT_STYLE.syncedSong.maxWidth,
