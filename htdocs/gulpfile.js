@@ -136,7 +136,22 @@ const ejsTask = (done) => {
         preserve_newlines: false,
         extra_liners: [],
         // Keep script contents untouched to avoid breaking embedded PHP tags.
-        unformatted: ['script', 'br', 'hr', 'img', 'input', 'meta', 'link', 'area', 'base', 'col', 'embed', 'source', 'track', 'wbr']
+        unformatted: [
+          'script',
+          'br',
+          'hr',
+          'img',
+          'input',
+          'meta',
+          'link',
+          'area',
+          'base',
+          'col',
+          'embed',
+          'source',
+          'track',
+          'wbr',
+        ],
       })
     )
     .pipe(gulp.dest(`${DEVELOP}/`));

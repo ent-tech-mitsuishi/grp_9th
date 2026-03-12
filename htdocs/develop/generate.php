@@ -186,6 +186,11 @@ $user = $d['0'] ?? [];
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WKM95WS" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+  <div class="common__lock">
+    <div class="common__lock-inner">
+      <img src="./assets/img/common/popup.png" alt="スマートフォンを縦向きにして閲覧してください">
+    </div>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
   <script src="./assets/js/project.js"></script>
 </body>

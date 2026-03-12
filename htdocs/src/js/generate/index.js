@@ -232,10 +232,10 @@ const TEXT_LAYOUT = {
 };
 
 const MEMBER_CATCH_STYLE = {
-  x: 326,
-  y: 1054,
-  width: 320,
-  height: 122,
+  x: 312,
+  y: 1040,
+  width: 336,
+  height: 106,
   rotation: 0,
 };
 
