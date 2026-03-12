@@ -4,13 +4,8 @@
   // -------------------------
   // Data source（var data / window.garupa9thData 両対応）
   // -------------------------
-  const src =
-    typeof window.data !== 'undefined' && Array.isArray(window.data)
-      ? window.data
-      : Array.isArray(window.garupa9thData)
-        ? window.garupa9thData
-        : null;
-
+  const src = window.garupa9thData;
+  console.log(src);
   if (!src) return;
 
   // -------------------------
