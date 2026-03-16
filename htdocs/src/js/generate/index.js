@@ -250,10 +250,10 @@ const TEXT_LAYOUT = {
 };
 
 const MEMBER_CATCH_STYLE = {
-  x: 312,
+  x: 340,
   y: 1040,
-  width: 336,
-  height: 106,
+  width: 336 * 0.825,
+  height: 106 * 0.825,
   rotation: 0,
 };
 
