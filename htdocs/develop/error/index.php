@@ -19,16 +19,16 @@
   <!-- title -->
   <title>エラー | バンドリ！ ガールズバンドパーティ！「CIRCLE社内報」</title>
   <meta name="viewport" content="width=device-width">
-  <meta name="description" content="バンドリ！ ガールズバンドパーティ！リリース9周年記念サイトです。CIRCLE社内報の簡単な説明～～～～～～～～～。">
+  <meta name="description" content="バンドリ！ ガールズバンドパーティ！リリース9周年記念サイト「CiRCLE社内報」です。">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="エラー | バンドリ！ ガールズバンドパーティ！「CIRCLE社内報」">
-  <meta name="twitter:description" content="バンドリ！ ガールズバンドパーティ！リリース9周年記念サイトです。CIRCLE社内報の簡単な説明～～～～～～～～～。">
+  <meta name="twitter:description" content="バンドリ！ ガールズバンドパーティ！リリース9周年記念サイト「CiRCLE社内報」です。">
   <meta name="twitter:url" content="https://bang-dream.bushimo.jp/circle-newsletter/">
   <meta name="twitter:image" content="https://bang-dream.bushimo.jp/circle-newsletter/assets/img/ogp.png">
   <meta name="twitter:site" content="@bang_dream_gbp">
   <meta property="og:site_name" content="エラー | バンドリ！ ガールズバンドパーティ！「CIRCLE社内報」">
   <meta property="og:title" content="エラー | バンドリ！ ガールズバンドパーティ！「CIRCLE社内報」">
-  <meta property="og:description" content="バンドリ！ ガールズバンドパーティ！リリース9周年記念サイトです。CIRCLE社内報の簡単な説明～～～～～～～～～。">
+  <meta property="og:description" content="バンドリ！ ガールズバンドパーティ！リリース9周年記念サイト「CiRCLE社内報」です。">
   <meta property="og:url" content="https://bang-dream.bushimo.jp/circle-newsletter/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://bang-dream.bushimo.jp/circle-newsletter/assets/img/ogp.png">
@@ -64,7 +64,6 @@
         <div class="common__container">
           <div class="common__label">
             <p class="common__label-name">NEWSLETTER</p>
-            <p class="common__label-date">2026.3.16</p>
           </div>
           <span class="common__line rotate"></span>
           <h1 class="common__h1">
@@ -83,8 +82,8 @@
                     alt="アプリ内バナー"
                   >
               </div>
-              <a href="" target="_blank" class="error__btn">
-                <span>ゲームを起動する</span>
+              <a href="https://bit.ly/4qsibOG" target="_blank" class="error__btn">
+                <span>アプリを起動する</span>
               </a>
             </div>
           </div>
@@ -163,6 +162,6 @@
     </article>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
-  <script src="../assets/js/project.js"></script>
+  <script src="../assets/js/project.js?v=1773630187983"></script>
 </body>
 </html>

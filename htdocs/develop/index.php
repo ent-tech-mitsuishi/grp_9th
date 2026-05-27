@@ -168,16 +168,16 @@ $user = $d['0'] ?? [];
   <!-- title -->
   <title>バンドリ！ ガールズバンドパーティ！「CIRCLE社内報」</title>
   <meta name="viewport" content="width=device-width">
-  <meta name="description" content="バンドリ！ ガールズバンドパーティ！リリース9周年記念サイトです。CIRCLE社内報の簡単な説明～～～～～～～～～。">
+  <meta name="description" content="バンドリ！ ガールズバンドパーティ！リリース9周年記念サイト「CiRCLE社内報」です。">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="バンドリ！ ガールズバンドパーティ！「CIRCLE社内報」">
-  <meta name="twitter:description" content="バンドリ！ ガールズバンドパーティ！リリース9周年記念サイトです。CIRCLE社内報の簡単な説明～～～～～～～～～。">
+  <meta name="twitter:description" content="バンドリ！ ガールズバンドパーティ！リリース9周年記念サイト「CiRCLE社内報」です。">
   <meta name="twitter:url" content="https://bang-dream.bushimo.jp/circle-newsletter/">
   <meta name="twitter:image" content="https://bang-dream.bushimo.jp/circle-newsletter/assets/img/ogp.png">
   <meta name="twitter:site" content="@bang_dream_gbp">
   <meta property="og:site_name" content="バンドリ！ ガールズバンドパーティ！「CIRCLE社内報」">
   <meta property="og:title" content="バンドリ！ ガールズバンドパーティ！「CIRCLE社内報」">
-  <meta property="og:description" content="バンドリ！ ガールズバンドパーティ！リリース9周年記念サイトです。CIRCLE社内報の簡単な説明～～～～～～～～～。">
+  <meta property="og:description" content="バンドリ！ ガールズバンドパーティ！リリース9周年記念サイト「CiRCLE社内報」です。">
   <meta property="og:url" content="https://bang-dream.bushimo.jp/circle-newsletter/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://bang-dream.bushimo.jp/circle-newsletter/assets/img/ogp.png">
@@ -313,12 +313,6 @@ $user = $d['0'] ?? [];
                     </div>
                   </div>
                   <div class="top-player__data-item">
-                    <h3>一番集めているキャラクター</h3>
-                    <div class="top-player__data-dtl">
-                      <p class="top-player__data-name"></p>
-                    </div>
-                  </div>
-                  <div class="top-player__data-item">
                     <h3>最初に引いたメンバー</h3>
                     <div class="top-player__data-dtl">
                       <p class="top-player__data-name"></p>
@@ -326,6 +320,12 @@ $user = $d['0'] ?? [];
                         <span class="card-star"></span>
                         <p class="card-name"></p>
                       </div>
+                    </div>
+                  </div>
+                  <div class="top-player__data-item">
+                    <h3>一番集めているキャラクター</h3>
+                    <div class="top-player__data-dtl">
+                      <p class="top-player__data-name"></p>
                     </div>
                   </div>
                 </div>
@@ -358,30 +358,35 @@ $user = $d['0'] ?? [];
                         </p>
                         <p class="top-player__graph-percent"></p>
                       </div>
+                      <div class="top-player__graph-item-bg"></div>
                       <div class="top-player__graph-item is-normal">
                         <p class="top-player__graph-score">
                           <span></span><span></span>
                         </p>
                         <p class="top-player__graph-percent"></p>
                       </div>
+                      <div class="top-player__graph-item-bg"></div>
                       <div class="top-player__graph-item is-hard">
                         <p class="top-player__graph-score">
                           <span></span><span></span>
                         </p>
                         <p class="top-player__graph-percent"></p>
                       </div>
+                      <div class="top-player__graph-item-bg"></div>
                       <div class="top-player__graph-item is-expert">
                         <p class="top-player__graph-score">
                           <span></span><span></span>
                         </p>
                         <p class="top-player__graph-percent"></p>
                       </div>
+                      <div class="top-player__graph-item-bg"></div>
                       <div class="top-player__graph-item is-special">
                         <p class="top-player__graph-score">
                           <span></span><span></span>
                         </p>
                         <p class="top-player__graph-percent"></p>
                       </div>
+                      <div class="top-player__graph-item-bg"></div>
                     </div>
                   </div>
                 </div>
@@ -461,7 +466,7 @@ $user = $d['0'] ?? [];
                   alt="あなたの社内報をXでシェアしよう！"
                 >
             </h2>
-            <a href="https://x.com/intent/tweet?text=%E3%80%8CCiRCLE%E7%A4%BE%E5%86%85%E5%A0%B1%E3%80%8D%E3%81%A7%E3%80%81%E3%81%93%E3%82%8C%E3%81%BE%E3%81%A7%E3%81%AE%E8%BB%8C%E8%B7%A1%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A%E4%B8%AD%EF%BC%81%0D%0A%23%E3%82%AC%E3%83%AB%E3%83%91%0D%0A&url=https%3A%2F%2Fbang-dream.bushimo.jp%2Fcircle-newsletter%2F" target="_blank" class="top__share-btn">
+            <a href="https://x.com/intent/tweet?text=%E3%80%8CCiRCLE%E7%A4%BE%E5%86%85%E5%A0%B1%E3%80%8D%E3%81%A7%E3%80%81%E3%81%93%E3%82%8C%E3%81%BE%E3%81%A7%E3%81%AE%E8%BB%8C%E8%B7%A1%E3%82%92%E6%8C%AF%E3%82%8A%E8%BF%94%E3%82%8A%E4%B8%AD%EF%BC%81%0D%0A%23%E3%82%AC%E3%83%AB%E3%83%91" target="_blank" class="top__share-btn">
               <span>
                 <img src="./assets/img/icon_x.png" alt="X">
               </span> でシェアする </a>
@@ -542,6 +547,6 @@ $user = $d['0'] ?? [];
     </article>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
-  <script src="./assets/js/project.js"></script>
+  <script src="./assets/js/project.js?v=1773630187969"></script>
 </body>
 </html>
